@@ -1,0 +1,9 @@
+Rekursioon
+    def faktoriaal(n):
+        if n == 0:
+            return 1
+        else:
+            return n * faktoriaal(n - 1)
+
+Fraktalid
+    puu lehtedega järjest hargnev
