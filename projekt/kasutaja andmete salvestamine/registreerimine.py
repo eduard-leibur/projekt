@@ -3,6 +3,7 @@ import json
 with open("kasutajate andmed.json", "r") as fail_sisse:
     sõnastik = json.load(fail_sisse)
 
+print("Registreerimine.")
 kasutajanimi = input("Kasutajanimi: ")
 parool = input("Parool: ")
 sõnastik[kasutajanimi] = parool
