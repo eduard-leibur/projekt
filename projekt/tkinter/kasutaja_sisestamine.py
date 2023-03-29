@@ -19,9 +19,13 @@ def kinnita():  # "Kinnita" nuppu vajutades
     else:
         if kasutajanimi in andmed:
             if andmed[kasutajanimi] == parool:
+                with open("kasutaja.txt", "w") as kasutaja_fail:    # sisselogitud kasutajanime salvestamine
+                    kasutaja_fail.write(kasutajanimi)
+
                 print("Kasutaja", kasutajanimi, "sisse logitud.")  # info konsooli
                 sõnum = "Kasutaja " + kasutajanimi + " sisse logitud."
                 tkinter.messagebox.showinfo(title=None, message=sõnum)
+                quit(2)     # 2- kasutaja sisse logitud
             else:
                 tkinter.messagebox.showerror(title=None, message="Vale parool!")
         else:

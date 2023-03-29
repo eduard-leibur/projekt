@@ -17,6 +17,12 @@ x = (ekraani_laius/2) - (laius/2)
 y = (ekraani_kõrgus/2) - (kõrgus/2)
 avakuva.geometry('%dx%d+%d+%d' % (laius, kõrgus, x, y))
 
+with open("kasutaja.txt", "r") as kasutaja_fail:
+    kasutaja = kasutaja_fail.read()
+
+kasutaja_silt = tkinter.Label(avakuva, text=kasutaja)
+kasutaja_silt.pack()
+
 testnupp = tkinter.Button(avakuva, text="Sisenemine", command=kasutaja_sisestamine)
 testnupp.pack()
 
