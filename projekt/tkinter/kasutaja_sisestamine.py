@@ -3,7 +3,7 @@ import json
 from tkinter import messagebox
 
 
-def kinnita():  # "Kinnita" nuppu vajutades
+def kinnita(juhtum):  # "Kinnita" nuppu vajutades
     kasutajanimi = kasutajanimi_sisestus.get()
     parool = parool_sisestus.get()
 
@@ -59,6 +59,10 @@ def registreeri():  # "Registreeri" nuppu vajutades
                                      message="Kasutajanimi ei tohi sisaldada täpitähti!")
 
 
+def test():
+    print("test")
+
+
 aken = tkinter.Tk()
 aken.title("Sisse logimine")
 
@@ -77,9 +81,10 @@ kasutajanime_silt = tkinter.Label(aken, text="Kasutajanimi:", font=("calibre", 1
 parooli_silt = tkinter.Label(aken, text="Parool:", font=("calibre", 12, "bold"))
 kasutajanime_kast = tkinter.Entry(aken, textvariable=kasutajanimi_sisestus, font=("calibre", 12))
 parooli_kast = tkinter.Entry(aken, textvariable=parool_sisestus, font=("calibre", 12))
+parooli_kast.bind("<Return>", kinnita)
 
 väljumisnupp = tkinter.Button(aken, text="Välju", command=lambda: quit(1))     # 1 - nupust väljumine
-sisse_logimine = tkinter.Button(aken, text="Logi sisse", command=kinnita)
+sisse_logimine = tkinter.Button(aken, text="Logi sisse", command=lambda: kinnita("nupp"))
 registreerimine = tkinter.Button(aken, text="Registreeri", command=registreeri)
 
 
