@@ -32,10 +32,21 @@ silt = "Kasutaja: " + kasutaja
 kasutaja_silt = tkinter.Label(avakuva, text=silt)
 kasutaja_silt.pack()
 
-testnupp = tkinter.Button(avakuva, text="Sisenemine", command=kasutaja_sisestamine)
-testnupp.pack()
+sisenemine = tkinter.Button(avakuva, text="Sisenemine", command=kasutaja_sisestamine)
+sisenemine.pack(pady=20)
+
+kategooriate_pady = 5
+filmid = tkinter.Button(avakuva, text="Filmid", command=lambda: print("Tahab saada filme"))
+filmid.pack(pady=kategooriate_pady)
+raamatud = tkinter.Button(avakuva, text="Raamatud", command=lambda: print("Tahab saada raamatuid"))
+raamatud.pack(pady=kategooriate_pady)
+mängud = tkinter.Button(avakuva, text="Mängud", command=lambda: print("Tahab saada mänge"))
+mängud.pack(pady=kategooriate_pady)
+kohad = tkinter.Button(avakuva, text="Kohad", command=lambda: print("Tahab saada kohti"))
+kohad.pack(pady=kategooriate_pady)
 
 väljumisnupp = tkinter.Button(avakuva, text="Välju", command=väljumine)
-väljumisnupp.pack()
+väljumisnupp.pack(pady=20)
+
 
 avakuva.mainloop()
