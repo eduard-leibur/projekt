@@ -1,13 +1,15 @@
+import os
 import tkinter
 import json
 from tkinter import messagebox
+from funktsioonid.geomeetria import geomeetria_keskele
 
 
 def kinnita(juhtum):  # "Kinnita" nuppu vajutades
     kasutajanimi = kasutajanimi_sisestus.get()
     parool = parool_sisestus.get()
 
-    with open("kasutajate andmed.json", "r") as fail:
+    with open("andmed/kasutajate andmed.json", "r") as fail:
         andmed = json.load(fail)
 
     if kasutajanimi == "":
@@ -19,7 +21,7 @@ def kinnita(juhtum):  # "Kinnita" nuppu vajutades
     else:
         if kasutajanimi in andmed:
             if andmed[kasutajanimi] == parool:
-                with open("kasutaja.txt", "w") as kasutaja_fail:    # sisselogitud kasutajanime salvestamine
+                with open("andmed/kasutaja.txt", "w") as kasutaja_fail:    # sisselogitud kasutajanime salvestamine
                     kasutaja_fail.write(kasutajanimi)
 
                 print("Kasutaja", kasutajanimi, "sisse logitud.")  # info konsooli
@@ -39,11 +41,15 @@ def registreeri():  # "Registreeri" nuppu vajutades
     if kasutajanimi.isascii():
         if kasutajanimi.islower():
             if len(parool) >= 3:
-                with open("kasutajate andmed.json", "r") as fail_sisse:
+                with open("andmed/kasutajate andmed.json", "r") as fail_sisse:
                     andmed = json.load(fail_sisse)  # olemasolevate kasutajate lugemine
                 andmed[kasutajanimi] = parool  # uue kasutaja lisamine
-                with open("kasutajate andmed.json", "w") as fail_välja:
+                with open("andmed/kasutajate andmed.json", "w") as fail_välja:
                     json.dump(andmed, fail_välja)  # sõnastiku koos uue kasutajaga salvestamine
+
+                käsklus = "mkdir .\\andmed\\kasutajad\\" + kasutajanimi
+                os.system(käsklus)      # loob kasutaja nimelise kausta kasutaja andmete jaoks
+                print(kasutajanimi, "kaust loodud.")
 
                 print("Kasutaja", kasutajanimi, "registreeritud.")  # info konsooli
                 sõnum = "Kasutaja " + kasutajanimi + " registreeritud."
@@ -59,20 +65,10 @@ def registreeri():  # "Registreeri" nuppu vajutades
                                      message="Kasutajanimi ei tohi sisaldada täpitähti!")
 
 
-def test():
-    print("test")
-
-
 aken = tkinter.Tk()
 aken.title("Sisse logimine")
+geomeetria_keskele(aken, 400, 300)
 
-laius = 400
-kõrgus = 300
-ekraani_laius = aken.winfo_screenwidth()
-ekraani_kõrgus = aken.winfo_screenheight()
-x = (ekraani_laius/2) - (laius/2)
-y = (ekraani_kõrgus/2) - (kõrgus/2)
-aken.geometry("%dx%d+%d+%d" % (laius, kõrgus, x, y))    # akna ekraani keskele sättimine
 
 kasutajanimi_sisestus = tkinter.StringVar()
 parool_sisestus = tkinter.StringVar()
