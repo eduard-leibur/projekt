@@ -51,6 +51,14 @@ def registreeri():  # "Registreeri" nuppu vajutades
                 os.system(käsklus)      # loob kasutaja nimelise kausta kasutaja andmete jaoks
                 print(kasutajanimi, "kaust loodud.")
 
+                asukoht = "andmed/kasutajad/"   # lisada funktsioonide pkg-sse
+                filmide_asukoht = asukoht + kasutajanimi + "/filmid.json"
+                with open(filmide_asukoht, "w") as filmide_json:
+                    json.dump({}, filmide_json)
+                raamatute_asukoht = asukoht + kasutajanimi + "/raamatud.json"
+                with open(raamatute_asukoht, "w") as raamatute_json:
+                    json.dump({}, raamatute_json)
+
                 print("Kasutaja", kasutajanimi, "registreeritud.")  # info konsooli
                 sõnum = "Kasutaja " + kasutajanimi + " registreeritud."
                 tkinter.messagebox.showinfo(title=None, message=sõnum)
