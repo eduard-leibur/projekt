@@ -10,8 +10,14 @@ with open("andmed/kasutaja.txt", "r") as kasutaja_fail:
 print(kasutaja + "'i filmid.")
 
 
+valikuriba = tkinter.Frame(kuva, width=1000, height=150, bg="lightblue")
+valikuriba.pack(side="top", fill="x")
 
-väljumisnupp = tkinter.Button(kuva, text="Välju", command=lambda: quit(1))     # 1 - nupust väljumine
-väljumisnupp.pack()
+põhikuva = tkinter.Frame(kuva, width=1000, height=550, bg="lightgreen")
+põhikuva.pack(side="top", fill="both")
+
+"""
+väljumisnupp = tkinter.Button(põhikuva, text="Välju", command=lambda: quit(1))     # 1 - nupust väljumine
+väljumisnupp.pack()"""
 
 kuva.mainloop()
