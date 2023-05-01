@@ -126,9 +126,13 @@ kasutaja_silt = tkinter.Label(valikuriba, text=kasutaja_sildi_tekst, font=("Bold
 kasutaja_silt.pack(side=tkinter.RIGHT)
 
 
-põhikuva = tkinter.Frame(kuva, bg="lightgreen")
+põhikuva_värv = "lightgreen"
+põhikuva = tkinter.Frame(kuva, bg=põhikuva_värv)
 põhikuva.pack(side="top", fill="both")
 põhikuva.pack_propagate(False)
 põhikuva.configure(width=1000, height=550)
+
+põhikuva_silt = tkinter.Label(põhikuva, text="Palun valige ülevalt nimekiri.", font=("Bold", 12), bg=põhikuva_värv)
+põhikuva_silt.pack(fill="none", expand=True)
 
 kuva.mainloop()
