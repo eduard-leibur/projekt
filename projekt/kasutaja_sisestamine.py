@@ -5,7 +5,7 @@ from tkinter import messagebox
 from funktsioonid.geomeetria import geomeetria_keskele
 
 
-def kinnita(juhtum):  # "Kinnita" nuppu vajutades
+def kinnita(tühi_juhtum):  # "Kinnita" nuppu vajutades; "tühi_juthum" on enter klahvi määramiseks tühi argument
     kasutajanimi = kasutajanimi_sisestus.get()
     parool = parool_sisestus.get()
 
@@ -51,13 +51,11 @@ def registreeri():  # "Registreeri" nuppu vajutades
                 os.system(käsklus)      # loob kasutaja nimelise kausta kasutaja andmete jaoks
                 print(kasutajanimi, "kaust loodud.")
 
-                asukoht = "andmed/kasutajad/"   # lisada funktsioonide pkg-sse
+                asukoht = "andmed/kasutajad/"
                 filmide_asukoht = asukoht + kasutajanimi + "/filmid.json"
+
                 with open(filmide_asukoht, "w") as filmide_json:
                     json.dump({}, filmide_json)
-                raamatute_asukoht = asukoht + kasutajanimi + "/raamatud.json"
-                with open(raamatute_asukoht, "w") as raamatute_json:
-                    json.dump({}, raamatute_json)
 
                 print("Kasutaja", kasutajanimi, "registreeritud.")  # info konsooli
                 sõnum = "Kasutaja " + kasutajanimi + " registreeritud."
@@ -83,12 +81,14 @@ parool_sisestus = tkinter.StringVar()
 
 kasutajanime_silt = tkinter.Label(aken, text="Kasutajanimi:", font=("calibre", 12, "bold"))
 parooli_silt = tkinter.Label(aken, text="Parool:", font=("calibre", 12, "bold"))
+
 kasutajanime_kast = tkinter.Entry(aken, textvariable=kasutajanimi_sisestus, font=("calibre", 12))
 parooli_kast = tkinter.Entry(aken, textvariable=parool_sisestus, font=("calibre", 12))
+kasutajanime_kast.focus()
 parooli_kast.bind("<Return>", kinnita)
 
 väljumisnupp = tkinter.Button(aken, text="Välju", command=lambda: quit(1))     # 1 - nupust väljumine
-sisse_logimine = tkinter.Button(aken, text="Logi sisse", command=lambda: kinnita("nupp"))
+sisse_logimine = tkinter.Button(aken, text="Logi sisse", command=kinnita)
 registreerimine = tkinter.Button(aken, text="Registreeri", command=registreeri)
 
 

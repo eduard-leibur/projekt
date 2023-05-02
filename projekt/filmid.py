@@ -16,7 +16,12 @@ def lehe_loomine(nimekiri):
 
     nimekirja_kast = scrolledtext.ScrolledText(põhikuva)
 
-    with open("test_nimekirjad.json", "r") as nimekirjade_fail:
+    if kasutaja == "":
+        print("Pole kasutajat!")
+        quit(2)     # 2 - pole kasutajat
+
+    nimekirjade_asukoht = "andmed/kasutajad/" + kasutaja + "/filmid.json"
+    with open(nimekirjade_asukoht, "r") as nimekirjade_fail:
         nimekirjade_sõnastik = json.load(nimekirjade_fail)
 
     for film in nimekirjade_sõnastik[nimekiri]:
