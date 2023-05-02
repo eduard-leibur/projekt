@@ -12,9 +12,27 @@ def lehe_avamine(indikaator, nimekiri):
 
 
 def lehe_loomine(nimekiri):
-    leht = tkinter.Frame(põhikuva)
+    leht = tkinter.Frame(põhikuva, bg="blue")
 
-    nimekirja_kast = scrolledtext.ScrolledText(põhikuva, font=("Bold", 16))
+    lisamise_raami_värv = "yellow"
+    lisamise_raam = tkinter.Frame(leht, bg=lisamise_raami_värv)
+
+    lisamise_silt = tkinter.Label(lisamise_raam, text="Uue kirje sisestamine:",
+                                  font=("calibre", 14), bg=lisamise_raami_värv)
+    lisatud_kirje = tkinter.StringVar()
+    lisatud_kirje.set("Lisatava filmi pealkiri")
+    lisamise_kast = tkinter.Entry(lisamise_raam, textvariable=lisatud_kirje, font=("calibre", 14))
+    lisamise_nupp = tkinter.Button(lisamise_raam, text="Lisa",
+                                   command=lambda: print("Soovib lisada " + lisatud_kirje.get()))
+
+    lisamise_raam.pack(side=tkinter.BOTTOM, fill="x")
+    lisamise_silt.pack(side=tkinter.LEFT)
+    lisamise_kast.pack(side=tkinter.LEFT, pady=5)
+    lisamise_kast.pack_propagate(False)
+    lisamise_kast.configure(width=40)
+    lisamise_nupp.pack(side=tkinter.LEFT, padx=10)
+
+    nimekirja_kast = scrolledtext.ScrolledText(leht, font=("Bold", 16))
 
     if kasutaja == "":
         print("Pole kasutajat!")
@@ -28,11 +46,8 @@ def lehe_loomine(nimekiri):
         nimekirja_kast.insert(tkinter.END, film + "\n")
 
     nimekirja_kast.pack(fill="both", expand=True)
-    nimekirja_kast.configure(state="disabled", spacing1=10)
-
-    leht.pack()
-    leht.pack_propagate(False)
-    leht.configure(width=1000, height=550)
+    nimekirja_kast.configure(state="disabled")
+    leht.pack(fill="both")
 
 
 def tühjenda_põhikuva():
