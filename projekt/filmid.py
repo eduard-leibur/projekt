@@ -26,11 +26,25 @@ def lehe_loomine(nimekiri):
                                    command=lambda: kirje_lisamine(lisatud_kirje.get(), nimekiri))
 
     lisamise_raam.pack(side=tkinter.BOTTOM, fill="x")
+
     lisamise_silt.pack(side=tkinter.LEFT)
     lisamise_kast.pack(side=tkinter.LEFT, pady=5)
     lisamise_kast.pack_propagate(False)
-    lisamise_kast.configure(width=40)
+    lisamise_kast.configure(width=30)
     lisamise_nupp.pack(side=tkinter.LEFT, padx=10)
+
+    kustutamise_silt = tkinter.Label(lisamise_raam, text="Kustutatava kirje nr:",
+                                     font=("calibre", 14), bg=lisamise_raami_värv)
+    kustutatud_kirje = tkinter.StringVar()
+    kustutamise_kast = tkinter.Entry(lisamise_raam, textvariable=kustutatud_kirje, font=("calibre", 14))
+    kustutamise_nupp = tkinter.Button(lisamise_raam, text="Kustuta",
+                                      command=lambda: kirje_kustutamine(kustutatud_kirje.get(), nimekiri))
+
+    kustutamise_nupp.pack(side=tkinter.RIGHT, padx=10)
+    kustutamise_kast.pack(side=tkinter.RIGHT)
+    kustutamise_kast.pack_propagate(False)
+    kustutamise_kast.configure(width=7)
+    kustutamise_silt.pack(side=tkinter.RIGHT)
 
     nimekirja_kast = scrolledtext.ScrolledText(leht, font=("Bold", 16))
 
@@ -42,8 +56,11 @@ def lehe_loomine(nimekiri):
     with open(nimekirjade_asukoht, "r") as nimekirjade_fail:
         nimekirjade_sõnastik = json.load(nimekirjade_fail)
 
+    i = 1
     for film in nimekirjade_sõnastik[nimekiri]:
-        nimekirja_kast.insert(tkinter.END, film + "\n")
+        film = str(str(i) + ". " + film + "\n")
+        nimekirja_kast.insert(tkinter.END, film)
+        i += 1
 
     nimekirja_kast.pack(fill="both", expand=True)
     nimekirja_kast.configure(state="disabled", spacing1=10)
@@ -70,6 +87,21 @@ def kirje_lisamine(kirje, nimekiri):
     with open(nimekirjade_asukoht, "w") as nimekirjade_fail:
         json.dump(nimekirjad, nimekirjade_fail)
     print(kirje + " lisatud nimekirja " + nimekiri)
+    tühjenda_põhikuva()
+    lehe_loomine(nimekiri)
+
+
+def kirje_kustutamine(kirje_nr, nimekiri):
+    nimekirjade_asukoht = "andmed/kasutajad/" + kasutaja + "/filmid.json"
+    with open(nimekirjade_asukoht, "r") as nimekirjade_fail:
+        nimekirjad = json.load(nimekirjade_fail)
+
+    kirje_nr = int(kirje_nr) - 1
+    del nimekirjad[nimekiri][kirje_nr]
+
+    with open(nimekirjade_asukoht, "w") as nimekirjade_fail:
+        json.dump(nimekirjad, nimekirjade_fail)
+    print("Kirje nr. " + str(kirje_nr + 1) + " kustutatud nimekirjast " + nimekiri)
     tühjenda_põhikuva()
     lehe_loomine(nimekiri)
 
