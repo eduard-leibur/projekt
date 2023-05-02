@@ -88,7 +88,7 @@ kasutajanime_kast.focus()
 parooli_kast.bind("<Return>", kinnita)
 
 väljumisnupp = tkinter.Button(aken, text="Välju", command=lambda: quit(1))     # 1 - nupust väljumine
-sisse_logimine = tkinter.Button(aken, text="Logi sisse", command=kinnita)
+sisse_logimine = tkinter.Button(aken, text="Logi sisse", command=lambda: kinnita(0))
 registreerimine = tkinter.Button(aken, text="Registreeri", command=registreeri)
 
 

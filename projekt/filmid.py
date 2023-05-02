@@ -23,7 +23,7 @@ def lehe_loomine(nimekiri):
     lisatud_kirje.set("Lisatava filmi pealkiri")
     lisamise_kast = tkinter.Entry(lisamise_raam, textvariable=lisatud_kirje, font=("calibre", 14))
     lisamise_nupp = tkinter.Button(lisamise_raam, text="Lisa",
-                                   command=lambda: print("Soovib lisada " + lisatud_kirje.get()))
+                                   command=lambda: kirje_lisamine(lisatud_kirje.get(), nimekiri))
 
     lisamise_raam.pack(side=tkinter.BOTTOM, fill="x")
     lisamise_silt.pack(side=tkinter.LEFT)
@@ -46,7 +46,7 @@ def lehe_loomine(nimekiri):
         nimekirja_kast.insert(tkinter.END, film + "\n")
 
     nimekirja_kast.pack(fill="both", expand=True)
-    nimekirja_kast.configure(state="disabled")
+    nimekirja_kast.configure(state="disabled", spacing1=10)
     leht.pack(fill="both")
 
 
@@ -60,6 +60,18 @@ def peida_indikaatorid():
     vaadatud_indikaator.configure(bg=valikuriba_värv)
     nimekiri1_indikaator.configure(bg=valikuriba_värv)
     nimekiri2_indikaator.configure(bg=valikuriba_värv)
+
+
+def kirje_lisamine(kirje, nimekiri):
+    nimekirjade_asukoht = "andmed/kasutajad/" + kasutaja + "/filmid.json"
+    with open(nimekirjade_asukoht, "r") as nimekirjade_fail:
+        nimekirjad = json.load(nimekirjade_fail)
+    nimekirjad[nimekiri].append(kirje)
+    with open(nimekirjade_asukoht, "w") as nimekirjade_fail:
+        json.dump(nimekirjad, nimekirjade_fail)
+    print(kirje + " lisatud nimekirja " + nimekiri)
+    tühjenda_põhikuva()
+    lehe_loomine(nimekiri)
 
 
 kuva = tkinter.Tk()
