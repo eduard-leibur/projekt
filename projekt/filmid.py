@@ -14,7 +14,7 @@ def lehe_avamine(indikaator, nimekiri):
 def lehe_loomine(nimekiri):
     leht = tkinter.Frame(põhikuva)
 
-    nimekirja_kast = scrolledtext.ScrolledText(põhikuva)
+    nimekirja_kast = scrolledtext.ScrolledText(põhikuva, font=("Bold", 16))
 
     if kasutaja == "":
         print("Pole kasutajat!")
@@ -28,7 +28,7 @@ def lehe_loomine(nimekiri):
         nimekirja_kast.insert(tkinter.END, film + "\n")
 
     nimekirja_kast.pack(fill="both", expand=True)
-    nimekirja_kast.configure(state="disabled")
+    nimekirja_kast.configure(state="disabled", spacing1=10)
 
     leht.pack()
     leht.pack_propagate(False)
