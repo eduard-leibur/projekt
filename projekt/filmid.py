@@ -1,12 +1,33 @@
+import json
 import tkinter
+from tkinter import scrolledtext
 from funktsioonid.geomeetria import geomeetria_keskele
 
 
-def lehe_avamine(indikaator, leht):
+def lehe_avamine(indikaator, nimekiri):
     peida_indikaatorid()
     indikaator.configure(bg="blue")
     tühjenda_põhikuva()
-    leht()
+    lehe_loomine(nimekiri)
+
+
+def lehe_loomine(nimekiri):
+    leht = tkinter.Frame(põhikuva)
+
+    nimekirja_kast = scrolledtext.ScrolledText(põhikuva)
+
+    with open("test_nimekirjad.json", "r") as nimekirjade_fail:
+        nimekirjade_sõnastik = json.load(nimekirjade_fail)
+
+    for film in nimekirjade_sõnastik[nimekiri]:
+        nimekirja_kast.insert(tkinter.END, film + "\n")
+
+    nimekirja_kast.pack(fill="both", expand=True)
+    nimekirja_kast.configure(state="disabled")
+
+    leht.pack()
+    leht.pack_propagate(False)
+    leht.configure(width=1000, height=550)
 
 
 def tühjenda_põhikuva():
@@ -19,50 +40,6 @@ def peida_indikaatorid():
     vaadatud_indikaator.configure(bg=valikuriba_värv)
     nimekiri1_indikaator.configure(bg=valikuriba_värv)
     nimekiri2_indikaator.configure(bg=valikuriba_värv)
-
-
-def leht_soovikiri():
-    soovikiri = tkinter.Frame(põhikuva)
-
-    pealkiri = tkinter.Label(soovikiri, text="Soovikiri", font=("Bold", 12), pady=20)
-    pealkiri.pack()
-
-    soovikiri.pack()
-    soovikiri.pack_propagate(False)
-    soovikiri.configure(width=1000, height=550)
-
-
-def leht_vaadatud():
-    vaadatud_leht = tkinter.Frame(põhikuva)
-
-    pealkiri = tkinter.Label(vaadatud_leht, text="Vaadatud", font=("Bold", 12), pady=20)
-    pealkiri.pack()
-
-    vaadatud_leht.pack()
-    vaadatud_leht.pack_propagate(False)
-    vaadatud_leht.configure(width=1000, height=550)
-
-
-def leht_nimekiri1():
-    vaadatud_leht = tkinter.Frame(põhikuva)
-
-    pealkiri = tkinter.Label(vaadatud_leht, text="Nimekiri 1", font=("Bold", 12), pady=20)
-    pealkiri.pack()
-
-    vaadatud_leht.pack()
-    vaadatud_leht.pack_propagate(False)
-    vaadatud_leht.configure(width=1000, height=550)
-
-
-def leht_nimekiri2():
-    vaadatud_leht = tkinter.Frame(põhikuva)
-
-    pealkiri = tkinter.Label(vaadatud_leht, text="Nimekiri 2", font=("Bold", 12), pady=20)
-    pealkiri.pack()
-
-    vaadatud_leht.pack()
-    vaadatud_leht.pack_propagate(False)
-    vaadatud_leht.configure(width=1000, height=550)
 
 
 kuva = tkinter.Tk()
@@ -84,19 +61,19 @@ nuppude_vahe = 30
 nuppude_laius = -100
 
 soovikiri_nupp = tkinter.Button(valikuriba, text="Soovikiri",
-                                command=lambda: lehe_avamine(soovikiri_indikaator, leht_soovikiri))
+                                command=lambda: lehe_avamine(soovikiri_indikaator, "Soovikiri"))
 soovikiri_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
 
 vaadatud_nupp = tkinter.Button(valikuriba, text="Vaadatud",
-                               command=lambda: lehe_avamine(vaadatud_indikaator, leht_vaadatud))
+                               command=lambda: lehe_avamine(vaadatud_indikaator, "Vaadatud"))
 vaadatud_nupp.pack(side=tkinter.LEFT, padx=0)
 
 nimekiri1_nupp = tkinter.Button(valikuriba, text="Nimekiri 1",
-                                command=lambda: lehe_avamine(nimekiri1_indikaator, leht_nimekiri1))
+                                command=lambda: lehe_avamine(nimekiri1_indikaator, "Nimekiri 1"))
 nimekiri1_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
 
 nimekiri2_nupp = tkinter.Button(valikuriba, text="Nimekiri 2",
-                                command=lambda: lehe_avamine(nimekiri2_indikaator, leht_nimekiri2))
+                                command=lambda: lehe_avamine(nimekiri2_indikaator, "Nimekiri 2"))
 nimekiri2_nupp.pack(side=tkinter.LEFT, padx=0)
 valikuriba.update()
 
