@@ -3,6 +3,7 @@ import tkinter
 from tkinter import scrolledtext
 from funktsioonid.geomeetria import geomeetria_keskele
 
+
 class Kategooria:
     def __init__(self, pealkiri, kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
         self.pealkiri = pealkiri
@@ -53,10 +54,10 @@ class Kategooria:
 
         kustutamise_silt = tkinter.Label(lisamise_raam, text="Kustutatava kirje nr:",
                                          font=("calibre", 14), bg=lisamise_raami_värv)
-        kustutatud_kirje = tkinter.StringVar()
-        kustutamise_kast = tkinter.Entry(lisamise_raam, textvariable=kustutatud_kirje, font=("calibre", 14))
+        kustutatav_kirje = tkinter.StringVar()
+        kustutamise_kast = tkinter.Entry(lisamise_raam, textvariable=kustutatav_kirje, font=("calibre", 14))
         kustutamise_nupp = tkinter.Button(lisamise_raam, text="Kustuta",
-                                          command=lambda: self.kirje_kustutamine(kustutatud_kirje.get(), nimekiri))
+                                          command=lambda: self.kirje_kustutamine(kustutatav_kirje.get(), nimekiri))
 
         kustutamise_nupp.pack(side=tkinter.RIGHT, padx=10)
         kustutamise_kast.pack(side=tkinter.RIGHT)

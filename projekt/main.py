@@ -1,6 +1,7 @@
 import tkinter
 import os
 from funktsioonid.geomeetria import geomeetria_keskele
+from kategooria import Kategooria
 
 
 def kasutaja_sisestamine():
@@ -9,11 +10,13 @@ def kasutaja_sisestamine():
         sisestatud_kasutaja = fail.read()
     silt_kasutajaga = "Kasutaja: " + sisestatud_kasutaja
     kasutaja_silt.config(text=silt_kasutajaga)
+    global kasutaja
+    kasutaja = sisestatud_kasutaja
 
 
-def avamine(kategooria):
-    käsklus = "python " + kategooria + ".py"
-    os.system(käsklus)
+def avamine(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
+    kategooria = Kategooria(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses)
+    kategooria.peameetod()
 
 
 def väljumine():
@@ -36,13 +39,18 @@ sisenemine = tkinter.Button(avakuva, text="Sisenemine", command=kasutaja_sisesta
 sisenemine.pack(pady=20)
 
 kategooriate_pady = 5
-filmid = tkinter.Button(avakuva, text="Filmid", command=lambda: avamine("filmid"))
+filmid = tkinter.Button(avakuva, text="Filmid",
+                        command=lambda: avamine("Filmid", kasutaja, "lightblue", "filmid.json", "filmi", "filmid"))
 filmid.pack(pady=kategooriate_pady)
-raamatud = tkinter.Button(avakuva, text="Raamatud", command=lambda: avamine("raamatud"))
+raamatud = tkinter.Button(avakuva, text="Raamatud",
+                          command=lambda: avamine("Raamatud", kasutaja, "yellow",
+                                                  "raamatud.json", "raamatu", "raamatud"))
 raamatud.pack(pady=kategooriate_pady)
-mängud = tkinter.Button(avakuva, text="Mängud", command=lambda: avamine("mängud"))
+mängud = tkinter.Button(avakuva, text="Mängud",
+                        command=lambda: avamine("Mängud", kasutaja, "lightgreen", "mängud.json", "mängu", "mängud"))
 mängud.pack(pady=kategooriate_pady)
-riigid = tkinter.Button(avakuva, text="Riigid", command=lambda: avamine("riigid"))
+riigid = tkinter.Button(avakuva, text="Riigid",
+                        command=lambda: avamine("Riigid", kasutaja, "lightred", "riigid.json", "riigi", "riigid"))
 riigid.pack(pady=kategooriate_pady)
 
 väljumisnupp = tkinter.Button(avakuva, text="Välju", command=väljumine)
