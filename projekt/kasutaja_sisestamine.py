@@ -52,10 +52,12 @@ def registreeri():  # "Registreeri" nuppu vajutades
                 print(kasutajanimi, "kaust loodud.")
 
                 asukoht = "andmed/kasutajad/"
-                filmide_asukoht = asukoht + kasutajanimi + "/filmid.json"
+                asukohad = ["/filmid.json", "/raamatud.json", "/mängud.json", "/riigid.json"]
 
-                with open(filmide_asukoht, "w") as filmide_json:
-                    json.dump({}, filmide_json)
+                for element in asukohad:
+                    täielik_asukoht = asukoht + kasutajanimi + element
+                    with open(täielik_asukoht, "w") as json_fail:
+                        json.dump({"Soovikiri": [], "Vaadatud": [], "Nimekiri 1": [], "Nimekiri 2": []}, json_fail)
 
                 print("Kasutaja", kasutajanimi, "registreeritud.")  # info konsooli
                 sõnum = "Kasutaja " + kasutajanimi + " registreeritud."

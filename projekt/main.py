@@ -11,8 +11,9 @@ def kasutaja_sisestamine():
     kasutaja_silt.config(text=silt_kasutajaga)
 
 
-def filmid():
-    os.system("python filmid.py")
+def avamine(kategooria):
+    käsklus = "python " + kategooria + ".py"
+    os.system(käsklus)
 
 
 def väljumine():
@@ -35,14 +36,14 @@ sisenemine = tkinter.Button(avakuva, text="Sisenemine", command=kasutaja_sisesta
 sisenemine.pack(pady=20)
 
 kategooriate_pady = 5
-filmid = tkinter.Button(avakuva, text="Filmid", command=filmid)
+filmid = tkinter.Button(avakuva, text="Filmid", command=lambda: avamine("filmid"))
 filmid.pack(pady=kategooriate_pady)
-raamatud = tkinter.Button(avakuva, text="Raamatud", command=lambda: print("Tahab saada raamatuid"))
+raamatud = tkinter.Button(avakuva, text="Raamatud", command=lambda: avamine("raamatud"))
 raamatud.pack(pady=kategooriate_pady)
-mängud = tkinter.Button(avakuva, text="Mängud", command=lambda: print("Tahab saada mänge"))
+mängud = tkinter.Button(avakuva, text="Mängud", command=lambda: avamine("mängud"))
 mängud.pack(pady=kategooriate_pady)
-kohad = tkinter.Button(avakuva, text="Kohad", command=lambda: print("Tahab saada kohti"))
-kohad.pack(pady=kategooriate_pady)
+riigid = tkinter.Button(avakuva, text="Riigid", command=lambda: avamine("riigid"))
+riigid.pack(pady=kategooriate_pady)
 
 väljumisnupp = tkinter.Button(avakuva, text="Välju", command=väljumine)
 väljumisnupp.pack(pady=20)
