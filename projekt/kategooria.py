@@ -38,11 +38,11 @@ class Kategooria:
 
         lisamise_silt = tkinter.Label(lisamise_raam, text="Uue kirje sisestamine:",
                                       font=("calibre", 14), bg=lisamise_raami_värv)
+
         lisatud_kirje = tkinter.StringVar()
-        lisatud_kirje.set("Lisatava " + self.osastav_k + " pealkiri")
         lisamise_kast = tkinter.Entry(lisamise_raam, textvariable=lisatud_kirje, font=("calibre", 14))
         lisamise_nupp = tkinter.Button(lisamise_raam, text="Lisa",
-                                       command=lambda: self.kirje_lisamine(lisatud_kirje.get(), nimekiri))
+                                       command=lambda: self.kirje_lisamine(lisatud_kirje, nimekiri))
 
         lisamise_raam.pack(side=tkinter.BOTTOM, fill="x")
 
@@ -66,10 +66,6 @@ class Kategooria:
         kustutamise_silt.pack(side=tkinter.RIGHT)
 
         nimekirja_kast = scrolledtext.ScrolledText(leht, font=("Bold", 16))
-
-        if self.kasutaja == "":
-            print("Pole kasutajat!")
-            quit(2)     # 2 - pole kasutajat
 
         nimekirjade_asukoht = "andmed/kasutajad/" + self.kasutaja + "/" + self.fail
         with open(nimekirjade_asukoht, "r") as nimekirjade_fail:
@@ -96,6 +92,7 @@ class Kategooria:
         self.nimekiri2_indikaator.configure(bg=self.valikuriba_värv)
 
     def kirje_lisamine(self, kirje, nimekiri):
+        kirje = kirje.get()
         nimekirjade_asukoht = "andmed/kasutajad/" + self.kasutaja + "/" + self.fail
         with open(nimekirjade_asukoht, "r") as nimekirjade_fail:
             nimekirjad = json.load(nimekirjade_fail)

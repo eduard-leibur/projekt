@@ -15,8 +15,12 @@ def kasutaja_sisestamine():
 
 
 def avamine(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
-    kategooria = Kategooria(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses)
-    kategooria.peameetod()
+    if kasutaja == "":
+        print("Pole kasutajat!")
+        tkinter.messagebox.showerror(title="Puudub kastuaja", message="Pole kasutajat sisse logitud!")
+    else:
+        kategooria = Kategooria(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses)
+        kategooria.peameetod()
 
 
 def väljumine():
