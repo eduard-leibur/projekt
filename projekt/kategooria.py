@@ -39,10 +39,9 @@ class Kategooria:
         lisamise_silt = tkinter.Label(lisamise_raam, text="Uue kirje sisestamine:",
                                       font=("calibre", 14), bg=lisamise_raami_värv)
 
-        lisatud_kirje = tkinter.StringVar()
-        lisamise_kast = tkinter.Entry(lisamise_raam, textvariable=lisatud_kirje, font=("calibre", 14))
+        lisamise_kast = tkinter.Entry(lisamise_raam, font=("calibre", 14))
         lisamise_nupp = tkinter.Button(lisamise_raam, text="Lisa",
-                                       command=lambda: self.kirje_lisamine(lisatud_kirje, nimekiri))
+                                       command=lambda: self.kirje_lisamine(lisamise_kast.get(), nimekiri))
 
         lisamise_raam.pack(side=tkinter.BOTTOM, fill="x")
 
@@ -54,10 +53,9 @@ class Kategooria:
 
         kustutamise_silt = tkinter.Label(lisamise_raam, text="Kustutatava kirje nr:",
                                          font=("calibre", 14), bg=lisamise_raami_värv)
-        kustutatav_kirje = tkinter.StringVar()
-        kustutamise_kast = tkinter.Entry(lisamise_raam, textvariable=kustutatav_kirje, font=("calibre", 14))
+        kustutamise_kast = tkinter.Entry(lisamise_raam, font=("calibre", 14))
         kustutamise_nupp = tkinter.Button(lisamise_raam, text="Kustuta",
-                                          command=lambda: self.kirje_kustutamine(kustutatav_kirje.get(), nimekiri))
+                                          command=lambda: self.kirje_kustutamine(kustutamise_kast.get(), nimekiri))
 
         kustutamise_nupp.pack(side=tkinter.RIGHT, padx=10)
         kustutamise_kast.pack(side=tkinter.RIGHT)
@@ -92,7 +90,6 @@ class Kategooria:
         self.nimekiri2_indikaator.configure(bg=self.valikuriba_värv)
 
     def kirje_lisamine(self, kirje, nimekiri):
-        kirje = kirje.get()
         nimekirjade_asukoht = "andmed/kasutajad/" + self.kasutaja + "/" + self.fail
         with open(nimekirjade_asukoht, "r") as nimekirjade_fail:
             nimekirjad = json.load(nimekirjade_fail)
