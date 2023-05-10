@@ -7,3 +7,32 @@ Rekursioon
 
 Fraktalid
     puu lehtedega järjest hargnev
+
+10.05 ennikud
+    ennik (tuple)
+        3 elementi -> kolmik; n elementi -> ennik
+        nt. kolmik = ("Maie", "Kalle", "Olev")
+            üksik = (14, )      # (14) on teise tähendusega, ei piisa
+        elementide järjestus oluline -> indekseeritud
+        EI OLE MUUDETAV (muteeritav)
+        elementideks sobivad eri tüüpi andmed
+        struktuuri programmi käigus ei muudeta
+        funktsioon tagastab mitu väärtust
+            ei ole soovituslik
+    hulk (set)
+        nt. hulk1 = {"Maie", "Kalle", "Olev"}
+            tühihulk = set()
+            hulk2 = set([6, 5, 7])
+            hulk3 = set("krookus")
+        elemendid ei ole järjestatud
+        ei ole korduvaid element
+            set("krookus") -> {"k", "r", "o", "u", "s"}
+        nt. hulk1 = {"Maie", "Kalle", "Olev"}
+            hulk1.add("Kadri")
+            hulk1.remove("Kalle")
+            hulk1.pop()     # eemaldab ja tagastab juhusliku elemendi
+            hulk1.clear()   # tühjendab hulga
+            hulk1.copy()    # tagastab koopia
+            #   list.deepcopy()
+        saab kasutada, kui tarvis lahti saada korduvatest elementidest
+                     , hulgaoperatsioonid
