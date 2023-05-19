@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="19.05 ühikas: puhastus merge'iks" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="kategooria_klassina" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MjecaVBohhoHqNYatrc44HDBVa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kasutaja/PycharmProjects/projekt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kasutaja\PycharmProjects\projekt\projekt" />
+      <recent name="C:\Users\Kasutaja\PycharmProjects\projekt\projekt\tkinter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main (1)">
+    <configuration name="filmid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projekt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projekt/filmid.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="kasutaja_sisestamine (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projekt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="kategooria" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projekt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projekt/kategooria.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projekt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projekt/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projekt/tkinter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projekt/tkinter/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.kategooria" />
+        <item itemvalue="Python.kasutaja_sisestamine (1)" />
+        <item itemvalue="Python.filmid" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="" />
+      <created>1678285498813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678285498813</updated>
+    </task>
+    <task id="LOCAL-00001" summary="28.03 ühikas">
+      <created>1680015087550</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680015087550</updated>
+    </task>
+    <task id="LOCAL-00002" summary="28.03 ühikas">
+      <created>1680015595864</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680015595864</updated>
+    </task>
+    <task id="LOCAL-00003" summary="28.03 ühikas">
+      <created>1680016018921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680016018921</updated>
+    </task>
+    <task id="LOCAL-00004" summary="28.03 ühikas">
+      <created>1680018374034</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680018374034</updated>
+    </task>
+    <task id="LOCAL-00005" summary="28.03 ühikas">
+      <created>1680020426415</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680020426415</updated>
+    </task>
+    <task id="LOCAL-00006" summary="28.03 ühikas">
+      <created>1680021547114</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680021547114</updated>
+    </task>
+    <task id="LOCAL-00007" summary="28.03 ühikas">
+      <created>1680102727325</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680102727325</updated>
+    </task>
+    <task id="LOCAL-00008" summary="29.03 ühikas">
+      <created>1680105258648</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680105258648</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ümberseadmine">
+      <created>1680622610639</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680622610639</updated>
+    </task>
+    <task id="LOCAL-00010" summary="05.01 ühikas vahelehed töötavad, vaja sisu ja funktsioonide struktureerimist teiste kategooriate jaoks">
+      <created>1682962183306</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682962183306</updated>
+    </task>
+    <task id="LOCAL-00011" summary="05.01 ühikas väiksed täiendused (lehe_loomine funktsioon tagavaraks)">
+      <created>1682970685204</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682970685204</updated>
+    </task>
+    <task id="LOCAL-00012" summary="02.05 ühikas keritava sisu kastid loodud">
+      <created>1683012348019</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683012348019</updated>
+    </task>
+    <task id="LOCAL-00013" summary="02.05 ühikas struktureering paika; kasutaja nimekirja lugemine">
+      <created>1683013895902</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1683013895902</updated>
+    </task>
+    <task id="LOCAL-00014" summary="02.05 ühikas struktureering paika; kasutaja nimekirja lugemine">
+      <created>1683014644451</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683014644451</updated>
+    </task>
+    <task id="LOCAL-00015" summary="02.05 ühikas lisamise kast loodud">
+      <created>1683018818122</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683018818122</updated>
+    </task>
+    <task id="LOCAL-00016" summary="02.05 ühikas lisamine töötab">
+      <created>1683023632911</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1683023632911</updated>
+    </task>
+    <task id="LOCAL-00017" summary="02.05 ühikas kustutamine töötab; vaja ainult laiendada raamatutele ja mängudele">
+      <created>1683056147749</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1683056147749</updated>
+    </task>
+    <task id="LOCAL-00018" summary="03.05 ühikas: kiirelt laiendatud teistele kategooriatele, kuid seda vaja optimeerida">
+      <created>1683094725762</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1683094725762</updated>
+    </task>
+    <task id="LOCAL-00019" summary="03.05 ühikas: kiirelt laiendatud teistele kategooriatele, kuid seda vaja optimeerida">
+      <created>1683094776132</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1683094776132</updated>
+    </task>
+    <task id="LOCAL-00020" summary="03.05 ühikas: puhastus">
+      <created>1683095273412</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1683095273412</updated>
+    </task>
+    <task id="LOCAL-00021" summary="03.05 ühikas: klassi branch loomine">
+      <created>1683108045219</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1683108045219</updated>
+    </task>
+    <task id="LOCAL-00022" summary="03.05 ühikas: klassi branch loomine">
+      <created>1683108250478</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1683108250478</updated>
+    </task>
+    <task id="LOCAL-00023" summary="08.05 ühikas: üritan klassi korda teha, kuid ei õnnestu">
+      <created>1683559668058</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1683559668058</updated>
+    </task>
+    <task id="LOCAL-00024" summary="19.05 ühikas: unversioned failide lisamine">
+      <created>1684480909628</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1684480909628</updated>
+    </task>
+    <task id="LOCAL-00025" summary="19.05 ühikas: puhastus merge'iks">
+      <created>1684480959468</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1684480959468</updated>
+    </task>
+    <task id="LOCAL-00026" summary="19.05 ühikas: puhastus merge'iks">
+      <created>1684481086500</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1684481086500</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="28.03 ühikas" />
+    <MESSAGE value="29.03 ühikas" />
+    <MESSAGE value="ümberseadmine" />
+    <MESSAGE value="05.01 ühikas vahelehed töötavad, vaja sisu ja funktsioonide struktureerimist teiste kategooriate jaoks" />
+    <MESSAGE value="05.01 ühikas väiksed täiendused (lehe_loomine funktsioon tagavaraks)" />
+    <MESSAGE value="02.05 ühikas keritava sisu kastid loodud" />
+    <MESSAGE value="02.05 ühikas struktureering paika; kasutaja nimekirja lugemine" />
+    <MESSAGE value="02.05 ühikas lisamise kast loodud" />
+    <MESSAGE value="02.05 ühikas lisamine töötab" />
+    <MESSAGE value="02.05 ühikas kustutamine töötab; vaja ainult laiendada raamatutele ja mängudele" />
+    <MESSAGE value="03.05 ühikas: kiirelt laiendatud teistele kategooriatele, kuid seda vaja optimeerida" />
+    <MESSAGE value="03.05 ühikas: puhastus" />
+    <MESSAGE value="03.05 ühikas: klassi branch loomine" />
+    <MESSAGE value="08.05 ühikas: üritan klassi korda teha, kuid ei õnnestu" />
+    <MESSAGE value="19.05 ühikas: unversioned failide lisamine" />
+    <MESSAGE value="19.05 ühikas: puhastus merge'iks" />
+    <option name="LAST_COMMIT_MESSAGE" value="19.05 ühikas: puhastus merge'iks" />
+  </component>
+</project>
