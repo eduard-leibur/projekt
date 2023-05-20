@@ -1,4 +1,5 @@
 import tkinter
+from tkinter import messagebox
 import os
 from funktsioonid.geomeetria import geomeetria_keskele
 from kategooria import Kategooria
@@ -17,7 +18,7 @@ def kasutaja_sisestamine():
 def avamine(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
     if kasutaja == "":
         print("Pole kasutajat!")
-        tkinter.messagebox.showerror(title="Puudub kastuaja", message="Pole kasutajat sisse logitud!")
+        tkinter.messagebox.showwarning(title="Puudub kastuaja", message="Palun logige esmalt sisse kasutajana.")
     else:
         kategooria = Kategooria(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses)
         kategooria.peameetod()
