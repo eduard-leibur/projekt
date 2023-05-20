@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="20.05 Türil: nipet-näpet">
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="20.05 Türil: kasutaja sisestamise klassiks muutmine, vaja programm tööle saada, kood tundub korras">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutaja.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutaja.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/main.py" afterDir="false" />
     </list>
@@ -28,6 +29,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -365,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684574416778</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="20.05 Türil: kasutaja sisestamise klassiks muutmine, vaja programm tööle saada, kood tundub korras">
+      <created>1684576022537</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1684576022537</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -397,6 +413,7 @@
     <MESSAGE value="19.05 ühikas: unversioned failide lisamine" />
     <MESSAGE value="19.05 ühikas: puhastus merge'iks" />
     <MESSAGE value="20.05 Türil: nipet-näpet" />
-    <option name="LAST_COMMIT_MESSAGE" value="20.05 Türil: nipet-näpet" />
+    <MESSAGE value="20.05 Türil: kasutaja sisestamise klassiks muutmine, vaja programm tööle saada, kood tundub korras" />
+    <option name="LAST_COMMIT_MESSAGE" value="20.05 Türil: kasutaja sisestamise klassiks muutmine, vaja programm tööle saada, kood tundub korras" />
   </component>
 </project>

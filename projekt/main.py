@@ -1,6 +1,5 @@
 import tkinter
 from tkinter import messagebox
-import os
 from funktsioonid.geomeetria import geomeetria_keskele
 from kategooria import Kategooria
 from kasutaja_sisestamine import KasutajaSisestamine
