@@ -3,10 +3,13 @@ from tkinter import messagebox
 import os
 from funktsioonid.geomeetria import geomeetria_keskele
 from kategooria import Kategooria
+from kasutaja_sisestamine import KasutajaSisestamine
 
 
 def kasutaja_sisestamine():
-    os.system("python kasutaja_sisestamine.py")
+    kasutaja_klass = KasutajaSisestamine()
+    kasutaja_klass.peameetod()
+
     with open("andmed/kasutaja.txt", "r") as fail:
         sisestatud_kasutaja = fail.read()
     silt_kasutajaga = "Kasutaja: " + sisestatud_kasutaja
