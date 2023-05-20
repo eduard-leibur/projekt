@@ -90,7 +90,6 @@ class KasutajaSisestamine(tkinter.Tk):
                     print("Kasutaja", self.kasutajanimi, "registreeritud.")  # info konsooli
                     sõnum = "Kasutaja " + self.kasutajanimi + " registreeritud."
                     tkinter.messagebox.showinfo(title=None, message=sõnum)
-                    self.destroy()
                 else:
                     tkinter.messagebox.showerror(title="Viga paroolis",
                                                  message="Parool peab koosnema vähemalt "

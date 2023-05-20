@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="20.05 Türil: kasutaja siestamine töötab, aga ei uuenda end avakuval">
-      <change afterPath="$PROJECT_DIR$/projekt/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projekt/valikud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutaja.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutaja.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/kategooria.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/kategooria.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="20.05 Türil: kõige klassideks struktureerimine" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -397,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684589928048</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="20.05 Türil: kõige klassideks struktureerimine">
+      <created>1684599912587</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1684599912587</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -431,6 +430,7 @@
     <MESSAGE value="20.05 Türil: nipet-näpet" />
     <MESSAGE value="20.05 Türil: kasutaja sisestamise klassiks muutmine, vaja programm tööle saada, kood tundub korras" />
     <MESSAGE value="20.05 Türil: kasutaja siestamine töötab, aga ei uuenda end avakuval" />
-    <option name="LAST_COMMIT_MESSAGE" value="20.05 Türil: kasutaja siestamine töötab, aga ei uuenda end avakuval" />
+    <MESSAGE value="20.05 Türil: kõige klassideks struktureerimine" />
+    <option name="LAST_COMMIT_MESSAGE" value="20.05 Türil: kõige klassideks struktureerimine" />
   </component>
 </project>

@@ -46,4 +46,4 @@ class Valikud(tkinter.Tk):
             tkinter.messagebox.showwarning(title="Puudub kastuaja", message="Palun logige esmalt sisse kasutajana.")
         else:
             kategooria = Kategooria(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses)
-            kategooria.peameetod()
+            kategooria.mainloop()
