@@ -2,12 +2,39 @@ import os
 import tkinter
 import json
 from tkinter import messagebox
-from funktsioonid.geomeetria import geomeetria_keskele
+from projekt.funktsioonid.geomeetria import geomeetria_keskele
+from valikud import Valikud
 
 
-class KasutajaSisestamine:
+class KasutajaSisestamine(tkinter.Tk):
     def __init__(self):
-        self.aken = tkinter.Tk()
+        super().__init__()
+        self.title("Sisse logimine")
+        geomeetria_keskele(self, 400, 300)
+
+        self.kasutajanime_silt = tkinter.Label(self, text="Kasutajanimi:", font=("calibre", 12, "bold"))
+        self.parooli_silt = tkinter.Label(self, text="Parool:", font=("calibre", 12, "bold"))
+
+        self.kasutajanime_kast = tkinter.Entry(self, font=("calibre", 12))
+        self.parooli_kast = tkinter.Entry(self, font=("calibre", 12))
+        self.kasutajanime_kast.focus()
+
+        self.väljumisnupp = tkinter.Button(self, text="Välju", command=lambda: quit(1))  # 1 - nupust väljumine
+        self.kinnita_nupp = tkinter.Button(self, text="Logi sisse",
+                                           command=lambda: self.kinnita(self.kasutajanime_kast, self.parooli_kast))
+        self.registreerimine_nupp = tkinter.Button(self, text="Registreeri",
+                                                   command=lambda: self.registreeri(self.kasutajanime_kast,
+                                                                                    self.parooli_kast))
+
+        self.kasutajanime_silt.grid(row=0, column=0)
+        self.kasutajanime_kast.grid(row=0, column=1)
+        self.parooli_silt.grid(row=1, column=0)
+        self.parooli_kast.grid(row=1, column=1)
+
+        self.kinnita_nupp.grid(row=2, column=1)
+        self.registreerimine_nupp.grid(row=2, column=2)
+        self.väljumisnupp.grid(row=3, column=1)
+
         self.kasutajanimi = ""
         self.parool = ""
 
@@ -25,13 +52,13 @@ class KasutajaSisestamine:
         else:
             if self.kasutajanimi in andmed:
                 if andmed[self.kasutajanimi] == self.parool:
-                    with open("andmed/kasutaja.txt", "w") as kasutaja_fail:    # sisselogitud kasutajanime salvestamine
-                        kasutaja_fail.write(self.kasutajanimi)
-
                     print("Kasutaja", self.kasutajanimi, "sisse logitud.")  # info konsooli
                     sõnum = "Kasutaja " + self.kasutajanimi + " sisse logitud."
                     tkinter.messagebox.showinfo(title=None, message=sõnum)
-                    self.aken.destroy()
+
+                    self.destroy()
+                    valikud = Valikud(self.kasutajanimi)
+                    valikud.mainloop()
                 else:
                     tkinter.messagebox.showerror(title=None, message="Vale parool!")
             else:
@@ -63,7 +90,7 @@ class KasutajaSisestamine:
                     print("Kasutaja", self.kasutajanimi, "registreeritud.")  # info konsooli
                     sõnum = "Kasutaja " + self.kasutajanimi + " registreeritud."
                     tkinter.messagebox.showinfo(title=None, message=sõnum)
-                    self.aken.destroy()
+                    self.destroy()
                 else:
                     tkinter.messagebox.showerror(title="Viga paroolis",
                                                  message="Parool peab koosnema vähemalt "
@@ -79,30 +106,6 @@ class KasutajaSisestamine:
         self.kasutajanimi = kasutajanime_kast.get()
         self.parool = parooli_kast.get()
 
-    def peameetod(self):
-        self.aken.title("Sisse logimine")
-        geomeetria_keskele(self.aken, 400, 300)
-
-        kasutajanime_silt = tkinter.Label(self.aken, text="Kasutajanimi:", font=("calibre", 12, "bold"))
-        parooli_silt = tkinter.Label(self.aken, text="Parool:", font=("calibre", 12, "bold"))
-
-        kasutajanime_kast = tkinter.Entry(self.aken, font=("calibre", 12))
-        parooli_kast = tkinter.Entry(self.aken, font=("calibre", 12))
-        kasutajanime_kast.focus()
-
-        väljumisnupp = tkinter.Button(self.aken, text="Välju", command=lambda: quit(1))     # 1 - nupust väljumine
-        kinnita_nupp = tkinter.Button(self.aken, text="Logi sisse",
-                                      command=lambda: self.kinnita(kasutajanime_kast, parooli_kast))
-        registreerimine = tkinter.Button(self.aken, text="Registreeri",
-                                         command=lambda: self.registreeri(kasutajanime_kast, parooli_kast))
-
-        kasutajanime_silt.grid(row=0, column=0)
-        kasutajanime_kast.grid(row=0, column=1)
-        parooli_silt.grid(row=1, column=0)
-        parooli_kast.grid(row=1, column=1)
-
-        kinnita_nupp.grid(row=2, column=1)
-        registreerimine.grid(row=2, column=2)
-        väljumisnupp.grid(row=3, column=1)
-
-        self.aken.mainloop()
+    def kasutaja_sildi_tekst(self):
+        tekst = "Kastutaja: " + self.kasutajanimi
+        return tekst

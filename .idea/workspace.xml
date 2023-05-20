@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="20.05 Türil: kasutaja sisestamise klassiks muutmine, vaja programm tööle saada, kood tundub korras">
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="20.05 Türil: kasutaja siestamine töötab, aga ei uuenda end avakuval">
+      <change afterPath="$PROJECT_DIR$/projekt/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projekt/valikud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutaja.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutaja.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt/kategooria.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/kategooria.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,9 +62,15 @@
       <recent name="C:\Users\Kasutaja\PycharmProjects\projekt\projekt" />
       <recent name="C:\Users\Kasutaja\PycharmProjects\projekt\projekt\tkinter" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eduard Leibur\PycharmProjects\projekt\projekt" />
+      <recent name="C:\Users\Eduard Leibur\PycharmProjects\projekt\projekt\funktsioonid_klassid\funktsioonid" />
+      <recent name="C:\Users\Eduard Leibur\PycharmProjects\projekt\projekt\funktsioonid_klassid" />
+      <recent name="C:\Users\Eduard Leibur\PycharmProjects\projekt\projekt\funktsioonid" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.main (1)">
-    <configuration name="filmid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="kasutaja_sisestamine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projekt" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,28 +82,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projekt/filmid.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="kasutaja_sisestamine (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projekt" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projekt" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Eduard Leibur\PycharmProjects\projekt\projekt\funktsioonid\kasutaja_sisestamine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,7 +103,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projekt/kategooria.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Eduard Leibur\PycharmProjects\projekt\projekt\funktsioonid\kategooria.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,13 +154,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="valikud" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projekt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Eduard Leibur\PycharmProjects\projekt\projekt\funktsioonid\valikud.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.valikud" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.kategooria" />
         <item itemvalue="Python.kasutaja_sisestamine (1)" />
-        <item itemvalue="Python.filmid" />
       </list>
     </recent_temporary>
   </component>
@@ -381,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684576022537</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="20.05 Türil: kasutaja siestamine töötab, aga ei uuenda end avakuval">
+      <created>1684589928048</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684589928048</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,6 +430,7 @@
     <MESSAGE value="19.05 ühikas: puhastus merge'iks" />
     <MESSAGE value="20.05 Türil: nipet-näpet" />
     <MESSAGE value="20.05 Türil: kasutaja sisestamise klassiks muutmine, vaja programm tööle saada, kood tundub korras" />
-    <option name="LAST_COMMIT_MESSAGE" value="20.05 Türil: kasutaja sisestamise klassiks muutmine, vaja programm tööle saada, kood tundub korras" />
+    <MESSAGE value="20.05 Türil: kasutaja siestamine töötab, aga ei uuenda end avakuval" />
+    <option name="LAST_COMMIT_MESSAGE" value="20.05 Türil: kasutaja siestamine töötab, aga ei uuenda end avakuval" />
   </component>
 </project>

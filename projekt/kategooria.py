@@ -1,11 +1,15 @@
 import json
 import tkinter
 from tkinter import scrolledtext
-from funktsioonid.geomeetria import geomeetria_keskele
+from projekt.funktsioonid.geomeetria import geomeetria_keskele
 
 
-class Kategooria:
+class Kategooria(tkinter.Tk):
     def __init__(self, pealkiri, kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
+        super().__init__()
+        self.title(pealkiri)
+        geomeetria_keskele(self, 1000, 700)
+
         self.pealkiri = pealkiri
         self.kasutaja = kasutaja
         self.fail = fail
@@ -15,14 +19,66 @@ class Kategooria:
         self.valikuriba_värv = valikuriba_värv
         self.põhikuva_värv = "lightgreen"
 
-        self.kuva = tkinter.Tk()
-        self.põhikuva = tkinter.Frame(self.kuva, bg=self.põhikuva_värv)
-        self.valikuriba = tkinter.Frame(self.kuva, bg=valikuriba_värv)
+        self.põhikuva = tkinter.Frame(self, bg=self.põhikuva_värv)
+        self.valikuriba = tkinter.Frame(self, bg=valikuriba_värv)
 
         self.soovikiri_indikaator = tkinter.Label(self.valikuriba, bg=valikuriba_värv)
         self.vaadatud_indikaator = tkinter.Label(self.valikuriba, bg=self.valikuriba_värv)
         self.nimekiri1_indikaator = tkinter.Label(self.valikuriba, bg=self.valikuriba_värv)
         self.nimekiri2_indikaator = tkinter.Label(self.valikuriba, bg=self.valikuriba_värv)
+
+        print(kasutaja + "'i " + self.mitmuses)
+
+        self.valikuriba.pack_propagate(False)
+        self.valikuriba.pack(side="top", fill="x")
+        self.valikuriba.configure(width=1000, height=150)
+
+        nuppude_vahe = 30
+
+        self.soovikiri_nupp = tkinter.Button(self.valikuriba, text="Soovikiri",
+                                             command=lambda: self.lehe_avamine(self.soovikiri_indikaator, "Soovikiri"))
+        self.soovikiri_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
+
+        self.vaadatud_nupp = tkinter.Button(self.valikuriba, text="Vaadatud",
+                                            command=lambda: self.lehe_avamine(self.vaadatud_indikaator, "Vaadatud"))
+        self.vaadatud_nupp.pack(side=tkinter.LEFT, padx=0)
+
+        self.nimekiri1_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 1",
+                                             command=lambda: self.lehe_avamine(self.nimekiri1_indikaator, "Nimekiri 1"))
+        self.nimekiri1_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
+
+        self.nimekiri2_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 2",
+                                             command=lambda: self.lehe_avamine(self.nimekiri2_indikaator, "Nimekiri 2"))
+        self.nimekiri2_nupp.pack(side=tkinter.LEFT, padx=0)
+        self.valikuriba.update()
+
+        self.soovikiri_indikaator.place(x=nuppude_vahe, y=45, width=self.soovikiri_nupp.winfo_width(), height=6)
+
+        self.vaadatud_indikaator.place(x=2 * nuppude_vahe + self.soovikiri_nupp.winfo_width(), y=45,
+                                       width=self.vaadatud_nupp.winfo_width(), height=6)
+
+        self.nimekiri1_indikaator.place(x=3 * nuppude_vahe + self.soovikiri_nupp.winfo_width() +
+                                        self.vaadatud_nupp.winfo_width(),
+                                        y=45, width=self.nimekiri1_nupp.winfo_width(), height=6)
+
+        self.nimekiri2_indikaator.place(x=4 * nuppude_vahe + self.soovikiri_nupp.winfo_width() +
+                                        self.vaadatud_nupp.winfo_width() + self.nimekiri1_nupp.winfo_width(),
+                                        y=45, width=self.nimekiri2_nupp.winfo_width(), height=6)
+
+        self.väljumisnupp = tkinter.Button(self.valikuriba, text="Välju", command=lambda: quit(1))  # 1 nupust väljumine
+        self.väljumisnupp.pack(side=tkinter.RIGHT, padx=nuppude_vahe)
+
+        kasutaja_sildi_tekst = "Kasutaja: " + kasutaja
+        self.kasutaja_silt = tkinter.Label(self.valikuriba, text=kasutaja_sildi_tekst, font=("Bold", 12))
+        self.kasutaja_silt.pack(side=tkinter.RIGHT)
+
+        self.põhikuva.pack(side="top", fill="both")
+        self.põhikuva.pack_propagate(False)
+        self.põhikuva.configure(width=1000, height=550)
+
+        self.põhikuva_silt = tkinter.Label(self.põhikuva, text="Palun valige ülevalt nimekiri.",
+                                           font=("Bold", 12), bg=self.põhikuva_värv)
+        self.põhikuva_silt.pack(fill="none", expand=True)
 
     def lehe_avamine(self, indikaator, nimekiri):
         self.peida_indikaatorid()
@@ -113,63 +169,3 @@ class Kategooria:
         print("Kirje nr. " + str(kirje_nr + 1) + " kustutatud nimekirjast " + nimekiri)
         self.tühjenda_põhikuva()
         self.lehe_loomine(nimekiri)
-
-    def peameetod(self):
-        self.kuva.title(self.pealkiri)
-        geomeetria_keskele(self.kuva, 1000, 700)
-
-        with open("andmed/kasutaja.txt", "r") as kasutaja_fail:
-            kasutaja = kasutaja_fail.read()
-        print(kasutaja + "'i " + self.mitmuses)
-
-        self.valikuriba.pack_propagate(False)
-        self.valikuriba.pack(side="top", fill="x")
-        self.valikuriba.configure(width=1000, height=150)
-
-        nuppude_vahe = 30
-
-        soovikiri_nupp = tkinter.Button(self.valikuriba, text="Soovikiri",
-                                        command=lambda: self.lehe_avamine(self.soovikiri_indikaator, "Soovikiri"))
-        soovikiri_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
-
-        vaadatud_nupp = tkinter.Button(self.valikuriba, text="Vaadatud",
-                                       command=lambda: self.lehe_avamine(self.vaadatud_indikaator, "Vaadatud"))
-        vaadatud_nupp.pack(side=tkinter.LEFT, padx=0)
-
-        nimekiri1_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 1",
-                                        command=lambda: self.lehe_avamine(self.nimekiri1_indikaator, "Nimekiri 1"))
-        nimekiri1_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
-
-        nimekiri2_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 2",
-                                        command=lambda: self.lehe_avamine(self.nimekiri2_indikaator, "Nimekiri 2"))
-        nimekiri2_nupp.pack(side=tkinter.LEFT, padx=0)
-        self.valikuriba.update()
-
-        self.soovikiri_indikaator.place(x=nuppude_vahe, y=45, width=soovikiri_nupp.winfo_width(), height=6)
-
-        self.vaadatud_indikaator.place(x=2*nuppude_vahe+soovikiri_nupp.winfo_width(), y=45,
-                                       width=vaadatud_nupp.winfo_width(), height=6)
-
-        self.nimekiri1_indikaator.place(x=3*nuppude_vahe+soovikiri_nupp.winfo_width()+vaadatud_nupp.winfo_width(), y=45,
-                                        width=nimekiri1_nupp.winfo_width(), height=6)
-
-        self.nimekiri2_indikaator.place(x=4 * nuppude_vahe + soovikiri_nupp.winfo_width() +
-                                        vaadatud_nupp.winfo_width() + nimekiri1_nupp.winfo_width(),
-                                        y=45, width=nimekiri2_nupp.winfo_width(), height=6)
-
-        väljumisnupp = tkinter.Button(self.valikuriba, text="Välju", command=lambda: quit(1))     # 1 - nupust väljumine
-        väljumisnupp.pack(side=tkinter.RIGHT, padx=nuppude_vahe)
-
-        kasutaja_sildi_tekst = "Kasutaja: " + kasutaja
-        kasutaja_silt = tkinter.Label(self.valikuriba, text=kasutaja_sildi_tekst, font=("Bold", 12))
-        kasutaja_silt.pack(side=tkinter.RIGHT)
-
-        self.põhikuva.pack(side="top", fill="both")
-        self.põhikuva.pack_propagate(False)
-        self.põhikuva.configure(width=1000, height=550)
-
-        põhikuva_silt = tkinter.Label(self.põhikuva, text="Palun valige ülevalt nimekiri.",
-                                      font=("Bold", 12), bg=self.põhikuva_värv)
-        põhikuva_silt.pack(fill="none", expand=True)
-
-        self.kuva.mainloop()
