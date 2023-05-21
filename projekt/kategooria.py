@@ -70,9 +70,12 @@ class Kategooria(tkinter.Tk):
         self.väljumisnupp = tkinter.Button(self.valikuriba, text="Välju", command=lambda: quit(1))  # 1 nupust väljumine
         self.väljumisnupp.pack(side=tkinter.RIGHT, padx=nuppude_vahe)
 
+        self.tagasinupp = tkinter.Button(self.valikuriba, text="Tagasi", command=self.tagasi)
+        self.väljumisnupp.pack(side=tkinter.RIGHT)
+
         kasutaja_sildi_tekst = "Kasutaja: " + kasutaja
         self.kasutaja_silt = tkinter.Label(self.valikuriba, text=kasutaja_sildi_tekst, font=("Bold", 12))
-        self.kasutaja_silt.pack(side=tkinter.RIGHT)
+        self.kasutaja_silt.pack(side=tkinter.RIGHT, padx=nuppude_vahe)
 
         self.põhikuva.pack(side="top", fill="both")
         self.põhikuva.pack_propagate(False)
@@ -171,3 +174,8 @@ class Kategooria(tkinter.Tk):
         print("Kirje nr. " + str(kirje_nr + 1) + " kustutatud nimekirjast " + nimekiri)
         self.tühjenda_põhikuva()
         self.lehe_loomine(nimekiri)
+
+    def tagasi(self):
+        self.destroy()
+        valikud = Valikud(self.kasutaja)
+        valikud.mainloop()
