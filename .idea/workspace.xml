@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: värvide faili loomine ja seostamine">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutajate andmed.json" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutajate andmed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/funktsioonid/värvid.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/funktsioonid/värvid.py" afterDir="false" />
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: &quot;tagasi&quot; nupu alustamine">
       <change beforePath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/kategooria.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/kategooria.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/valikud.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/valikud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt/kategooria.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt/valikud.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/valikud_kategooria.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,7 +413,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684661201225</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="21.05 Türil: teise pealkirja korda saamine">
+      <created>1684662176941</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1684662176941</updated>
+    </task>
+    <task id="LOCAL-00034" summary="21.05 Türil: &quot;tagasi&quot; nupu alustamine">
+      <created>1684662519353</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1684662519353</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -453,6 +464,8 @@
     <MESSAGE value="20.05 Türil: kõige klassideks struktureerimine" />
     <MESSAGE value="21.05 Türil: README täiendamine" />
     <MESSAGE value="21.05 Türil: värvide faili loomine ja seostamine" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: värvide faili loomine ja seostamine" />
+    <MESSAGE value="21.05 Türil: teise pealkirja korda saamine" />
+    <MESSAGE value="21.05 Türil: &quot;tagasi&quot; nupu alustamine" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: &quot;tagasi&quot; nupu alustamine" />
   </component>
 </project>

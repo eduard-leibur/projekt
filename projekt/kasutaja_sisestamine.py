@@ -3,7 +3,7 @@ import tkinter
 import json
 from tkinter import messagebox
 from projekt.funktsioonid.geomeetria import geomeetria_keskele
-from valikud import Valikud
+from valikud_kategooria import Valikud
 
 
 class KasutajaSisestamine(tkinter.Tk):
