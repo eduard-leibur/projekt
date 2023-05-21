@@ -32,6 +32,7 @@ class KasutajaSisestamine(tkinter.Tk):
         self.registreerimine_nupp = tkinter.Button(kastike, text="Registreeri", bg=värv_regamise_nupp,
                                                    command=lambda: self.registreeri(self.kasutajanime_kast,
                                                                                     self.parooli_kast))
+        self.parooli_kast.bind("<Return>", lambda event: self.kinnita(self.kasutajanime_kast, self.parooli_kast))
 
         self.kasutajanime_silt.grid(row=0, column=0, pady=10)
         self.kasutajanime_kast.grid(row=0, column=1, pady=10)
@@ -61,8 +62,6 @@ class KasutajaSisestamine(tkinter.Tk):
             if self.kasutajanimi in andmed:
                 if andmed[self.kasutajanimi] == self.parool:
                     print("Kasutaja", self.kasutajanimi, "sisse logitud.")  # info konsooli
-                    sõnum = "Kasutaja " + self.kasutajanimi + " sisse logitud."
-                    tkinter.messagebox.showinfo(title=None, message=sõnum)
 
                     self.destroy()
                     valikud = Valikud(self.kasutajanimi)
@@ -272,6 +271,7 @@ class Kategooria(tkinter.Tk):
         lisamise_kast = tkinter.Entry(lisamise_raam, font=("calibre", 14))
         lisamise_nupp = tkinter.Button(lisamise_raam, text="Lisa",
                                        command=lambda: self.kirje_lisamine(lisamise_kast.get(), nimekiri))
+        lisamise_kast.bind("<Return>", lambda event: self.kirje_lisamine(lisamise_kast.get(), nimekiri))
 
         lisamise_raam.pack(side=tkinter.BOTTOM, fill="x")
 
@@ -286,6 +286,7 @@ class Kategooria(tkinter.Tk):
         kustutamise_kast = tkinter.Entry(lisamise_raam, font=("calibre", 14))
         kustutamise_nupp = tkinter.Button(lisamise_raam, text="Kustuta",
                                           command=lambda: self.kirje_kustutamine(kustutamise_kast.get(), nimekiri))
+        kustutamise_kast.bind("<Return>", lambda event: self.kirje_kustutamine(kustutamise_kast.get(), nimekiri))
 
         kustutamise_nupp.pack(side=tkinter.RIGHT, padx=10)
         kustutamise_kast.pack(side=tkinter.RIGHT)

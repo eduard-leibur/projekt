@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: kõik värvid">
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: klassid ühte faili">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutajad/ed/filmid.json" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutajad/ed/filmid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutajad/ed/mängud.json" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutajad/ed/mängud.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutajate andmed.json" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutajate andmed.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/valikud_kategooria.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -463,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684682362278</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="21.05 Türil: klassid ühte faili">
+      <created>1684682747289</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1684682747289</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -478,7 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="05.01 ühikas väiksed täiendused (lehe_loomine funktsioon tagavaraks)" />
     <MESSAGE value="02.05 ühikas keritava sisu kastid loodud" />
     <MESSAGE value="02.05 ühikas struktureering paika; kasutaja nimekirja lugemine" />
     <MESSAGE value="02.05 ühikas lisamise kast loodud" />
@@ -503,6 +510,7 @@
     <MESSAGE value="21.05 Türil: värvide põhitoonid paika" />
     <MESSAGE value="21.05 Türil: kasutajate sisestamise värvid" />
     <MESSAGE value="21.05 Türil: kõik värvid" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: kõik värvid" />
+    <MESSAGE value="21.05 Türil: klassid ühte faili" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: klassid ühte faili" />
   </component>
 </project>
