@@ -5,7 +5,7 @@ from projekt.funktsioonid.geomeetria import geomeetria_keskele
 
 
 class Kategooria(tkinter.Tk):
-    def __init__(self, pealkiri, kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
+    def __init__(self, pealkiri, kasutaja, valikuriba_värv, fail, osastav_k, mitmuses, teine_pealkiri):
         super().__init__()
         self.title(pealkiri)
         geomeetria_keskele(self, 1000, 700)
@@ -15,6 +15,7 @@ class Kategooria(tkinter.Tk):
         self.fail = fail
         self.osastav_k = osastav_k
         self.mitmuses = mitmuses
+        self.teine_pealkiri = teine_pealkiri
 
         self.valikuriba_värv = valikuriba_värv
         self.põhikuva_värv = "lightgreen"
@@ -39,8 +40,9 @@ class Kategooria(tkinter.Tk):
                                              command=lambda: self.lehe_avamine(self.soovikiri_indikaator, "Soovikiri"))
         self.soovikiri_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
 
-        self.vaadatud_nupp = tkinter.Button(self.valikuriba, text="Vaadatud",
-                                            command=lambda: self.lehe_avamine(self.vaadatud_indikaator, "Vaadatud"))
+        self.vaadatud_nupp = tkinter.Button(self.valikuriba, text=self.teine_pealkiri,
+                                            command=lambda: self.lehe_avamine(self.vaadatud_indikaator,
+                                                                              self.teine_pealkiri))
         self.vaadatud_nupp.pack(side=tkinter.LEFT, padx=0)
 
         self.nimekiri1_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 1",

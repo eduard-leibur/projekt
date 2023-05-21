@@ -20,33 +20,35 @@ class Valikud(tkinter.Tk):
 
         self.filmid = tkinter.Button(self, text="Filmid", command=lambda: self.avamine("Filmid", self.kasutaja,
                                                                                        värv_filmid, "filmid.json",
-                                                                                       "filmi", "filmid"))
+                                                                                       "filmi", "filmid", "Vaadatud"))
         self.filmid.pack(pady=kategooriate_pady)
 
         self.raamatud = tkinter.Button(self, text="Raamatud", command=lambda: self.avamine("Raamatud", self.kasutaja,
                                                                                            värv_raamatud,
                                                                                            "raamatud.json",
-                                                                                           "raamatu", "raamatud"))
+                                                                                           "raamatu", "raamatud",
+                                                                                           "Loetud"))
         self.raamatud.pack(pady=kategooriate_pady)
 
         self.mängud = tkinter.Button(self, text="Mängud", command=lambda: self.avamine("Mängud", self.kasutaja,
                                                                                        värv_mängud, "mängud.json",
-                                                                                       "mängu", "mängud"))
+                                                                                       "mängu", "mängud", "Mängitud"))
         self.mängud.pack(pady=kategooriate_pady)
 
         self.riigid = tkinter.Button(self, text="Riigid", command=lambda: self.avamine("Riigid", self.kasutaja,
                                                                                        värv_riigid, "riigid.json",
-                                                                                       "riigi", "riigid"))
+                                                                                       "riigi", "riigid", "Käidud"))
         self.riigid.pack(pady=kategooriate_pady)
 
         self.väljumisnupp = tkinter.Button(self, text="Välju", command=lambda: quit(2))
         self.väljumisnupp.pack(pady=20)
 
     @staticmethod
-    def avamine(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
+    def avamine(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses, teine_pealkiri):
         if aktiivne_kasutaja == "":
             print("Pole kasutajat!")
             tkinter.messagebox.showwarning(title="Puudub kastuaja", message="Palun logige esmalt sisse kasutajana.")
         else:
-            kategooria = Kategooria(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses)
+            kategooria = Kategooria(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses,
+                                    teine_pealkiri)
             kategooria.mainloop()

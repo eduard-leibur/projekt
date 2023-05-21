@@ -81,11 +81,15 @@ class KasutajaSisestamine(tkinter.Tk):
 
                     asukoht = "andmed/kasutajad/"
                     asukohad = ["/filmid.json", "/raamatud.json", "/mängud.json", "/riigid.json"]
+                    teise_nimekirja_pealkiri = ["Vaadatud", "Loetud", "Mängitud", "Käidud"]
 
+                    i = 0
                     for element in asukohad:
                         täielik_asukoht = asukoht + self.kasutajanimi + element
                         with open(täielik_asukoht, "w") as json_fail:
-                            json.dump({"Soovikiri": [], "Vaadatud": [], "Nimekiri 1": [], "Nimekiri 2": []}, json_fail)
+                            json.dump({"Soovikiri": [], teise_nimekirja_pealkiri[i]: [], "Nimekiri 1": [],
+                                       "Nimekiri 2": []}, json_fail)
+                        i += 1
 
                     print("Kasutaja", self.kasutajanimi, "registreeritud.")  # info konsooli
                     sõnum = "Kasutaja " + self.kasutajanimi + " registreeritud."
