@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: enter" />
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: README" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -479,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684688443984</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="21.05 Türil: README">
+      <created>1684688852891</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1684688852891</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -494,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="02.05 ühikas struktureering paika; kasutaja nimekirja lugemine" />
     <MESSAGE value="02.05 ühikas lisamise kast loodud" />
     <MESSAGE value="02.05 ühikas lisamine töötab" />
     <MESSAGE value="02.05 ühikas kustutamine töötab; vaja ainult laiendada raamatutele ja mängudele" />
@@ -519,6 +525,7 @@
     <MESSAGE value="21.05 Türil: kõik värvid" />
     <MESSAGE value="21.05 Türil: klassid ühte faili" />
     <MESSAGE value="21.05 Türil: enter" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: enter" />
+    <MESSAGE value="21.05 Türil: README" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: README" />
   </component>
 </project>
