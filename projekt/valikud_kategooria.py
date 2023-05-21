@@ -19,26 +19,24 @@ class Valikud(tkinter.Tk):
 
         kategooriate_pady = 5
 
-        self.filmid = tkinter.Button(self, text="Filmid", command=lambda: self.avamine("Filmid", self.kasutaja,
-                                                                                       värv_filmid, "filmid.json",
-                                                                                       "filmi", "filmid", "Vaadatud"))
+        self.filmid = tkinter.Button(self, text="Filmid", bg=värv_filmid,
+                                     command=lambda: self.avamine("Filmid", self.kasutaja, värv_filmid, "filmid.json",
+                                                                  "filmi", "filmid", "Vaadatud"))
         self.filmid.pack(pady=kategooriate_pady)
 
-        self.raamatud = tkinter.Button(self, text="Raamatud", command=lambda: self.avamine("Raamatud", self.kasutaja,
-                                                                                           värv_raamatud,
-                                                                                           "raamatud.json",
-                                                                                           "raamatu", "raamatud",
-                                                                                           "Loetud"))
+        self.raamatud = tkinter.Button(self, text="Raamatud", bg=värv_raamatud,
+                                       command=lambda: self.avamine("Raamatud", self.kasutaja, värv_raamatud,
+                                                                    "raamatud.json", "raamatu", "raamatud", "Loetud"))
         self.raamatud.pack(pady=kategooriate_pady)
 
-        self.mängud = tkinter.Button(self, text="Mängud", command=lambda: self.avamine("Mängud", self.kasutaja,
-                                                                                       värv_mängud, "mängud.json",
-                                                                                       "mängu", "mängud", "Mängitud"))
+        self.mängud = tkinter.Button(self, text="Mängud", bg=värv_mängud,
+                                     command=lambda: self.avamine("Mängud", self.kasutaja, värv_mängud, "mängud.json",
+                                                                  "mängu", "mängud", "Mängitud"))
         self.mängud.pack(pady=kategooriate_pady)
 
-        self.riigid = tkinter.Button(self, text="Riigid", command=lambda: self.avamine("Riigid", self.kasutaja,
-                                                                                       värv_riigid, "riigid.json",
-                                                                                       "riigi", "riigid", "Käidud"))
+        self.riigid = tkinter.Button(self, text="Riigid", bg=värv_riigid,
+                                     command=lambda: self.avamine("Riigid", self.kasutaja, värv_riigid, "riigid.json",
+                                                                  "riigi", "riigid", "Käidud"))
         self.riigid.pack(pady=kategooriate_pady)
 
         self.väljumisnupp = tkinter.Button(self, text="Välju", command=lambda: quit(2))
@@ -174,7 +172,7 @@ class Kategooria(tkinter.Tk):
         kustutamise_kast.configure(width=7)
         kustutamise_silt.pack(side=tkinter.RIGHT)
 
-        nimekirja_kast = scrolledtext.ScrolledText(leht, font=("Bold", 16))
+        nimekirja_kast = scrolledtext.ScrolledText(leht, font=("Bold", 16), bg=värv_nimekiri)
 
         nimekirjade_asukoht = "andmed/kasutajad/" + self.kasutaja + "/" + self.fail
         with open(nimekirjade_asukoht, "r") as nimekirjade_fail:

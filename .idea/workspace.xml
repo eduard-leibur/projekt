@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: &quot;tagasi&quot; nupp toimib; valikud ja kategooria samas failis">
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: värvide faili täiendamine">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/funktsioonid/värvid.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/funktsioonid/värvid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/valikud_kategooria.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/valikud_kategooria.py" afterDir="false" />
@@ -434,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684662824928</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="21.05 Türil: värvide faili täiendamine">
+      <created>1684663395233</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1684663395233</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -449,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="28.03 ühikas" />
     <MESSAGE value="29.03 ühikas" />
     <MESSAGE value="ümberseadmine" />
     <MESSAGE value="05.01 ühikas vahelehed töötavad, vaja sisu ja funktsioonide struktureerimist teiste kategooriate jaoks" />
@@ -474,6 +480,7 @@
     <MESSAGE value="21.05 Türil: teise pealkirja korda saamine" />
     <MESSAGE value="21.05 Türil: &quot;tagasi&quot; nupu alustamine" />
     <MESSAGE value="21.05 Türil: &quot;tagasi&quot; nupp toimib; valikud ja kategooria samas failis" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: &quot;tagasi&quot; nupp toimib; valikud ja kategooria samas failis" />
+    <MESSAGE value="21.05 Türil: värvide faili täiendamine" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: värvide faili täiendamine" />
   </component>
 </project>
