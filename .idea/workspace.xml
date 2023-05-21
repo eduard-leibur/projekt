@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: klassid ühte faili">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutajad/ed/filmid.json" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutajad/ed/filmid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutajad/ed/mängud.json" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutajad/ed/mängud.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutajate andmed.json" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutajate andmed.json" afterDir="false" />
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: enter">
+      <change beforePath="$PROJECT_DIR$/projekt/andmed/kasutajad/maku/raamatud.json" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/andmed/kasutajad/maku/raamatud.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -471,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684682747289</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="21.05 Türil: enter">
+      <created>1684687858953</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1684687858968</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -486,7 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="02.05 ühikas keritava sisu kastid loodud" />
     <MESSAGE value="02.05 ühikas struktureering paika; kasutaja nimekirja lugemine" />
     <MESSAGE value="02.05 ühikas lisamise kast loodud" />
     <MESSAGE value="02.05 ühikas lisamine töötab" />
@@ -511,6 +514,7 @@
     <MESSAGE value="21.05 Türil: kasutajate sisestamise värvid" />
     <MESSAGE value="21.05 Türil: kõik värvid" />
     <MESSAGE value="21.05 Türil: klassid ühte faili" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: klassid ühte faili" />
+    <MESSAGE value="21.05 Türil: enter" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: enter" />
   </component>
 </project>

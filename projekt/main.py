@@ -269,6 +269,7 @@ class Kategooria(tkinter.Tk):
                                       font=("calibre", 14), bg=self.värv_lisamise_raam)
 
         lisamise_kast = tkinter.Entry(lisamise_raam, font=("calibre", 14))
+        lisamise_kast.focus()
         lisamise_nupp = tkinter.Button(lisamise_raam, text="Lisa",
                                        command=lambda: self.kirje_lisamine(lisamise_kast.get(), nimekiri))
         lisamise_kast.bind("<Return>", lambda event: self.kirje_lisamine(lisamise_kast.get(), nimekiri))
