@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: värvide faili täiendamine">
+    <list default="true" id="5cea89a1-7793-4a1d-af51-04e0a0485339" name="Changes" comment="21.05 Türil: värvide põhitoonid paika">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt/funktsioonid/värvid.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/funktsioonid/värvid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt/valikud_kategooria.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/valikud_kategooria.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt/kasutaja_sisestamine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -441,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684663395233</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="21.05 Türil: värvide põhitoonid paika">
+      <created>1684664139804</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1684664139804</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -456,7 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="29.03 ühikas" />
     <MESSAGE value="ümberseadmine" />
     <MESSAGE value="05.01 ühikas vahelehed töötavad, vaja sisu ja funktsioonide struktureerimist teiste kategooriate jaoks" />
     <MESSAGE value="05.01 ühikas väiksed täiendused (lehe_loomine funktsioon tagavaraks)" />
@@ -481,6 +487,7 @@
     <MESSAGE value="21.05 Türil: &quot;tagasi&quot; nupu alustamine" />
     <MESSAGE value="21.05 Türil: &quot;tagasi&quot; nupp toimib; valikud ja kategooria samas failis" />
     <MESSAGE value="21.05 Türil: värvide faili täiendamine" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: värvide faili täiendamine" />
+    <MESSAGE value="21.05 Türil: värvide põhitoonid paika" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.05 Türil: värvide põhitoonid paika" />
   </component>
 </project>

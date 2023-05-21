@@ -4,36 +4,45 @@ import json
 from tkinter import messagebox
 from projekt.funktsioonid.geomeetria import geomeetria_keskele
 from valikud_kategooria import Valikud
+from funktsioonid.värvid import *
 
 
 class KasutajaSisestamine(tkinter.Tk):
     def __init__(self):
         super().__init__()
         self.title("Sisse logimine")
+        self.configure(bg=värv_põhikuva)
         geomeetria_keskele(self, 400, 300)
 
-        self.kasutajanime_silt = tkinter.Label(self, text="Kasutajanimi:", font=("calibre", 12, "bold"))
-        self.parooli_silt = tkinter.Label(self, text="Parool:", font=("calibre", 12, "bold"))
+        kastike = tkinter.Frame(width=300, height=210, bg=värv_põhikuva)
+        kastike.place(x=50, y=50)
 
-        self.kasutajanime_kast = tkinter.Entry(self, font=("calibre", 12))
-        self.parooli_kast = tkinter.Entry(self, font=("calibre", 12))
+        self.kasutajanime_silt = tkinter.Label(kastike, text="Kasutajanimi:", bg=värv_põhikuva,
+                                               font=("calibre", 12, "bold"))
+        self.parooli_silt = tkinter.Label(kastike, text="Parool:", bg=värv_põhikuva,
+                                          font=("calibre", 12, "bold"))
+
+        self.kasutajanime_kast = tkinter.Entry(kastike, font=("calibre", 12))
+        self.parooli_kast = tkinter.Entry(kastike, font=("calibre", 12))
         self.kasutajanime_kast.focus()
 
-        self.väljumisnupp = tkinter.Button(self, text="Välju", command=lambda: quit(1))  # 1 - nupust väljumine
-        self.kinnita_nupp = tkinter.Button(self, text="Logi sisse",
+        self.väljumisnupp = tkinter.Button(kastike, text="Välju", bg=värv_väljumise_nupp, fg="white",
+                                           command=lambda: quit(1))  # 1 - nupust väljumine
+        self.kinnita_nupp = tkinter.Button(kastike, text="Logi sisse", bg=värv_logimisnupp,
                                            command=lambda: self.kinnita(self.kasutajanime_kast, self.parooli_kast))
-        self.registreerimine_nupp = tkinter.Button(self, text="Registreeri",
+        self.registreerimine_nupp = tkinter.Button(kastike, text="Registreeri", bg=värv_regamise_nupp,
                                                    command=lambda: self.registreeri(self.kasutajanime_kast,
                                                                                     self.parooli_kast))
 
-        self.kasutajanime_silt.grid(row=0, column=0)
-        self.kasutajanime_kast.grid(row=0, column=1)
-        self.parooli_silt.grid(row=1, column=0)
-        self.parooli_kast.grid(row=1, column=1)
+        self.kasutajanime_silt.grid(row=0, column=0, pady=10)
+        self.kasutajanime_kast.grid(row=0, column=1, pady=10)
+        self.parooli_silt.grid(row=1, column=0, pady=10)
+        self.parooli_kast.grid(row=1, column=1, pady=10)
 
-        self.kinnita_nupp.grid(row=2, column=1)
-        self.registreerimine_nupp.grid(row=2, column=2)
-        self.väljumisnupp.grid(row=3, column=1)
+        self.kinnita_nupp.grid(row=2, column=1, pady=10)
+        self.registreerimine_nupp.grid(row=2, column=0, pady=10)
+        self.väljumisnupp.grid(row=3, column=1, pady=40)
+        kastike.grid_propagate(False)
 
         self.kasutajanimi = ""
         self.parool = ""
