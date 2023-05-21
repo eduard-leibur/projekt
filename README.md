@@ -10,3 +10,9 @@ Eraldi on funktsioonide jaoks on kaust koos __init__.py failiga funktsioonide im
 
 Kasutajate andmed ja paroolid on failidest kergesti kättesaadavad, seega on liiga isiklikuks peetava info salvestamine
 mittesoovituslik ning ei tohiks kasutada samu paroole, mis teiste rakenduste kontodega.
+
+Värvid:
+
+https://coolors.co/palette/ccd5ae-e9edc9-fefae0-faedcd-d4a373
+
+https://coolors.co/palette/264653-2a9d8f-e9c46a-f4a261-e76f51
