@@ -2,6 +2,7 @@ import tkinter
 from tkinter import messagebox
 from projekt.funktsioonid.geomeetria import geomeetria_keskele
 from projekt.kategooria import Kategooria
+from funktsioonid.värvid import *
 
 
 class Valikud(tkinter.Tk):
@@ -18,29 +19,31 @@ class Valikud(tkinter.Tk):
         kategooriate_pady = 5
 
         self.filmid = tkinter.Button(self, text="Filmid", command=lambda: self.avamine("Filmid", self.kasutaja,
-                                                                                       "lightblue", "filmid.json",
+                                                                                       värv_filmid, "filmid.json",
                                                                                        "filmi", "filmid"))
         self.filmid.pack(pady=kategooriate_pady)
 
         self.raamatud = tkinter.Button(self, text="Raamatud", command=lambda: self.avamine("Raamatud", self.kasutaja,
-                                                                                           "yellow", "raamatud.json",
+                                                                                           värv_raamatud,
+                                                                                           "raamatud.json",
                                                                                            "raamatu", "raamatud"))
         self.raamatud.pack(pady=kategooriate_pady)
 
         self.mängud = tkinter.Button(self, text="Mängud", command=lambda: self.avamine("Mängud", self.kasutaja,
-                                                                                       "lightgreen", "mängud.json",
+                                                                                       värv_mängud, "mängud.json",
                                                                                        "mängu", "mängud"))
         self.mängud.pack(pady=kategooriate_pady)
 
         self.riigid = tkinter.Button(self, text="Riigid", command=lambda: self.avamine("Riigid", self.kasutaja,
-                                                                                       "lightred", "riigid.json",
+                                                                                       värv_riigid, "riigid.json",
                                                                                        "riigi", "riigid"))
         self.riigid.pack(pady=kategooriate_pady)
 
         self.väljumisnupp = tkinter.Button(self, text="Välju", command=lambda: quit(2))
         self.väljumisnupp.pack(pady=20)
 
-    def avamine(self, pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
+    @staticmethod
+    def avamine(pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses):
         if aktiivne_kasutaja == "":
             print("Pole kasutajat!")
             tkinter.messagebox.showwarning(title="Puudub kastuaja", message="Palun logige esmalt sisse kasutajana.")
