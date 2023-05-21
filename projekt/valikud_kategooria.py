@@ -69,12 +69,12 @@ class Kategooria(tkinter.Tk):
         self.teine_pealkiri = teine_pealkiri
 
         self.valikuriba_värv = valikuriba_värv
-        self.põhikuva_värv = "lightgreen"
+        self.värv_lisamise_raam = värv_lisamise_raam
 
-        self.põhikuva = tkinter.Frame(self, bg=self.põhikuva_värv)
-        self.valikuriba = tkinter.Frame(self, bg=valikuriba_värv)
+        self.põhikuva = tkinter.Frame(self, bg=värv_põhikuva)
+        self.valikuriba = tkinter.Frame(self, bg=self.valikuriba_värv)
 
-        self.soovikiri_indikaator = tkinter.Label(self.valikuriba, bg=valikuriba_värv)
+        self.soovikiri_indikaator = tkinter.Label(self.valikuriba, bg=self.valikuriba_värv)
         self.vaadatud_indikaator = tkinter.Label(self.valikuriba, bg=self.valikuriba_värv)
         self.nimekiri1_indikaator = tkinter.Label(self.valikuriba, bg=self.valikuriba_värv)
         self.nimekiri2_indikaator = tkinter.Label(self.valikuriba, bg=self.valikuriba_värv)
@@ -133,7 +133,7 @@ class Kategooria(tkinter.Tk):
         self.põhikuva.configure(width=1000, height=550)
 
         self.põhikuva_silt = tkinter.Label(self.põhikuva, text="Palun valige ülevalt nimekiri.",
-                                           font=("Bold", 12), bg=self.põhikuva_värv)
+                                           font=("Bold", 12), bg=värv_põhikuva)
         self.põhikuva_silt.pack(fill="none", expand=True)
 
     def lehe_avamine(self, indikaator, nimekiri):
@@ -145,11 +145,10 @@ class Kategooria(tkinter.Tk):
     def lehe_loomine(self, nimekiri):
         leht = tkinter.Frame(self.põhikuva, bg="blue")
 
-        lisamise_raami_värv = "yellow"
-        lisamise_raam = tkinter.Frame(leht, bg=lisamise_raami_värv)
+        lisamise_raam = tkinter.Frame(leht, bg=self.värv_lisamise_raam)
 
         lisamise_silt = tkinter.Label(lisamise_raam, text="Uue kirje sisestamine:",
-                                      font=("calibre", 14), bg=lisamise_raami_värv)
+                                      font=("calibre", 14), bg=self.värv_lisamise_raam)
 
         lisamise_kast = tkinter.Entry(lisamise_raam, font=("calibre", 14))
         lisamise_nupp = tkinter.Button(lisamise_raam, text="Lisa",
@@ -164,7 +163,7 @@ class Kategooria(tkinter.Tk):
         lisamise_nupp.pack(side=tkinter.LEFT, padx=10)
 
         kustutamise_silt = tkinter.Label(lisamise_raam, text="Kustutatava kirje nr:",
-                                         font=("calibre", 14), bg=lisamise_raami_värv)
+                                         font=("calibre", 14), bg=self.värv_lisamise_raam)
         kustutamise_kast = tkinter.Entry(lisamise_raam, font=("calibre", 14))
         kustutamise_nupp = tkinter.Button(lisamise_raam, text="Kustuta",
                                           command=lambda: self.kirje_kustutamine(kustutamise_kast.get(), nimekiri))
