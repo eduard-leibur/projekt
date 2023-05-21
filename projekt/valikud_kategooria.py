@@ -12,14 +12,15 @@ class Valikud(tkinter.Tk):
         self.kasutaja = kasutaja
         self.title("Avakuva")
         geomeetria_keskele(self, 500, 400)
+        self.configure(bg=värv_põhikuva)
 
         self.silt = "Kasutaja: " + self.kasutaja
-        self.kasutaja_silt = tkinter.Label(self, text=self.silt)
+        self.kasutaja_silt = tkinter.Label(self, text=self.silt, pady=40, font=("calibre", 13), bg=värv_põhikuva)
         self.kasutaja_silt.pack()
 
         kategooriate_pady = 5
 
-        self.filmid = tkinter.Button(self, text="Filmid", bg=värv_filmid,
+        self.filmid = tkinter.Button(self, text="Filmid", bg=värv_filmid, fg="white",
                                      command=lambda: self.avamine("Filmid", self.kasutaja, värv_filmid, "filmid.json",
                                                                   "filmi", "filmid", "Vaadatud"))
         self.filmid.pack(pady=kategooriate_pady)
@@ -39,8 +40,9 @@ class Valikud(tkinter.Tk):
                                                                   "riigi", "riigid", "Käidud"))
         self.riigid.pack(pady=kategooriate_pady)
 
-        self.väljumisnupp = tkinter.Button(self, text="Välju", command=lambda: quit(2))
-        self.väljumisnupp.pack(pady=20)
+        self.väljumisnupp = tkinter.Button(self, text="Välju", bg=värv_väljumise_nupp, fg="white",
+                                           command=lambda: quit(2))
+        self.väljumisnupp.pack(pady=40)
 
     def avamine(self, pealkiri, aktiivne_kasutaja, valikuriba_värv, fail, osastav_k, mitmuses, teine_pealkiri):
         if aktiivne_kasutaja == "":
@@ -85,20 +87,20 @@ class Kategooria(tkinter.Tk):
 
         nuppude_vahe = 30
 
-        self.soovikiri_nupp = tkinter.Button(self.valikuriba, text="Soovikiri",
+        self.soovikiri_nupp = tkinter.Button(self.valikuriba, text="Soovikiri", bg=värv_nimekirjade_nupud,
                                              command=lambda: self.lehe_avamine(self.soovikiri_indikaator, "Soovikiri"))
         self.soovikiri_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
 
-        self.vaadatud_nupp = tkinter.Button(self.valikuriba, text=self.teine_pealkiri,
+        self.vaadatud_nupp = tkinter.Button(self.valikuriba, text=self.teine_pealkiri, bg=värv_nimekirjade_nupud,
                                             command=lambda: self.lehe_avamine(self.vaadatud_indikaator,
                                                                               self.teine_pealkiri))
         self.vaadatud_nupp.pack(side=tkinter.LEFT, padx=0)
 
-        self.nimekiri1_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 1",
+        self.nimekiri1_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 1", bg=värv_nimekirjade_nupud,
                                              command=lambda: self.lehe_avamine(self.nimekiri1_indikaator, "Nimekiri 1"))
         self.nimekiri1_nupp.pack(side=tkinter.LEFT, padx=nuppude_vahe)
 
-        self.nimekiri2_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 2",
+        self.nimekiri2_nupp = tkinter.Button(self.valikuriba, text="Nimekiri 2", bg=värv_nimekirjade_nupud,
                                              command=lambda: self.lehe_avamine(self.nimekiri2_indikaator, "Nimekiri 2"))
         self.nimekiri2_nupp.pack(side=tkinter.LEFT, padx=0)
         self.valikuriba.update()
@@ -116,14 +118,17 @@ class Kategooria(tkinter.Tk):
                                         self.vaadatud_nupp.winfo_width() + self.nimekiri1_nupp.winfo_width(),
                                         y=45, width=self.nimekiri2_nupp.winfo_width(), height=6)
 
-        self.väljumisnupp = tkinter.Button(self.valikuriba, text="Välju", command=lambda: quit(1))  # 1 nupust väljumine
+        self.väljumisnupp = tkinter.Button(self.valikuriba, text="Välju", bg=värv_väljumise_nupp, fg="white",
+                                           command=lambda: quit(1))  # 1 nupust väljumine
         self.väljumisnupp.pack(side=tkinter.RIGHT, padx=nuppude_vahe)
 
-        self.tagasinupp = tkinter.Button(self.valikuriba, text="Tagasi", command=self.tagasi)
+        self.tagasinupp = tkinter.Button(self.valikuriba, text="Tagasi", bg=värv_tagasi_nupp,
+                                         command=self.tagasi)
         self.tagasinupp.pack(side=tkinter.RIGHT)
 
         kasutaja_sildi_tekst = "Kasutaja: " + kasutaja
-        self.kasutaja_silt = tkinter.Label(self.valikuriba, text=kasutaja_sildi_tekst, font=("Bold", 12))
+        self.kasutaja_silt = tkinter.Label(self.valikuriba, text=kasutaja_sildi_tekst, font=("Bold", 12),
+                                           bg=valikuriba_värv)
         self.kasutaja_silt.pack(side=tkinter.RIGHT, padx=nuppude_vahe)
 
         self.põhikuva.pack(side="top", fill="both")

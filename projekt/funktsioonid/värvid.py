@@ -10,3 +10,5 @@ värv_lisamise_raam = "#e9c46a"
 värv_logimisnupp = "#8ac926"
 värv_regamise_nupp = "#a2d2ff"
 värv_väljumise_nupp = "#bf0603"
+värv_tagasi_nupp = "#ffbe0b"
+värv_nimekirjade_nupud = värv_lisamise_raam
