@@ -1,6 +1,0 @@
-Värviteler	91	92	94	93	94	95	95
-Videomakk	28	31	34	35	37	39	45
-Raadio	89	90	89	86	88	89	89
-Muusikakeskus	27	28	34	37	40	45	51
-Personaalarvuti	12	17	22	29	33	42	45
-Interneti-ühendus	7	10	14	17	24	34	39
